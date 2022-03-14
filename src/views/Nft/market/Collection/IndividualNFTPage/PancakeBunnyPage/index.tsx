@@ -40,7 +40,7 @@ const IndividualPancakeBunnyPage = (props: IndividualPancakeBunnyPageProps) => {
 const IndividualPancakeBunnyPageBase: React.FC<IndividualPancakeBunnyPageProps> = ({ bunnyId }) => {
   const { account } = useWeb3React()
   const collection = useGetCollection(pancakeBunniesAddress)
-  const totalBunnyCount = Number(collection.totalSupply)
+  const totalBunnyCount = Number(collection?.totalSupply)
   const [nothingForSaleBunny, setNothingForSaleBunny] = useState<NftToken>(null)
   const { lastUpdated, previousLastUpdated, setLastUpdated: refresh } = useLastUpdated()
   const allBunnies = useGetAllBunniesByBunnyId(bunnyId)
@@ -49,7 +49,7 @@ const IndividualPancakeBunnyPageBase: React.FC<IndividualPancakeBunnyPageProps> 
   const { isUpdatingPancakeBunnies, latestPancakeBunniesUpdateAt, fetchMorePancakeBunnies } =
     useFetchByBunnyIdAndUpdate(bunnyId)
   const isWindowVisible = useIsWindowVisible()
-  const bunniesSortedByPrice = orderBy(allBunnies, (nft) => parseFloat(nft.marketData.currentAskPrice))
+  const bunniesSortedByPrice = orderBy(allBunnies, (nft) => parseFloat(nft?.marketData?.currentAskPrice))
   const allBunniesFromOtherSellers = account
     ? bunniesSortedByPrice.filter((bunny) => bunny.marketData.currentSeller !== account.toLowerCase())
     : bunniesSortedByPrice
@@ -121,7 +121,7 @@ const IndividualPancakeBunnyPageBase: React.FC<IndividualPancakeBunnyPageProps> 
   }, [cheapestBunny, bunnyId])
 
   const sortedNfts = useMemo(
-    () => orderBy(allBunnies, (nft) => Number(nft.marketData?.currentAskPrice) || 0, priceSort),
+    () => orderBy(allBunnies, (nft) => Number(nft?.marketData?.currentAskPrice) || 0, priceSort),
     [allBunnies, priceSort],
   )
 
