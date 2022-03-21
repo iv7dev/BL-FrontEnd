@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from 'react'
 import { BigNumber } from '@ethersproject/bignumber'
 import { TransactionResponse } from '@ethersproject/providers'
-import { Currency, currencyEquals, ETHER, TokenAmount, WETH } from '@pancakeswap/sdk'
+import { Currency, currencyEquals, ETHER, TokenAmount, WETH } from '@genesysnetwork/sdk'
 import { Button, Text, AddIcon, CardBody, Message, useModal } from '@pancakeswap/uikit'
 import { logError } from 'utils/sentry'
 import { useIsTransactionUnsupported } from 'hooks/Trades'

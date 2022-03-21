@@ -1,4 +1,4 @@
-import { JSBI, Price, Token, Percent } from '@pancakeswap/sdk'
+import { JSBI, Price, Token, Percent } from '@genesysnetwork/sdk'
 import getRatePercentageDifference from './getRatePercentageDifference'
 
 const CAKE = new Token(56, '0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82', 18, 'CAKE', 'PancakeSwap Token')

@@ -1,4 +1,4 @@
-import { ChainId } from '@pancakeswap/sdk'
+import { ChainId } from '@genesysnetwork/sdk'
 import { CHAIN_ID } from 'config/constants/networks'
 import store from 'state'
 import { GAS_PRICE_GWEI } from 'state/user/hooks/helpers'

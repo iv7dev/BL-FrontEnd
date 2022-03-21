@@ -1,4 +1,4 @@
-import { Currency } from '@pancakeswap/sdk'
+import { Currency } from '@genesysnetwork/sdk'
 import {
   ArrowDownIcon,
   Button,

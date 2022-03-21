@@ -1729,6 +1729,18 @@
     graphql-request "^3.5.0"
     tslib "^2.3.1"
 
+"@genesysnetwork/sdk@^0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@genesysnetwork/sdk/-/sdk-0.0.2.tgz#3652a35f8219d9808183057b2e5212b7ba1cf23f"
+  integrity sha512-YpoJxJvwslBUV7AZcuD3J8Vt5NPLrqg9wrVJl516W/3XXbwxJ7Mu3IP8rVG5zlnFKsJiOHpwjRAk4KKQxafBYw==
+  dependencies:
+    big.js "^5.2.2"
+    decimal.js-light "^2.5.0"
+    jsbi "^3.1.4"
+    tiny-invariant "^1.1.0"
+    tiny-warning "^1.0.3"
+    toformat "^2.0.0"
+
 "@hapi/hoek@^9.0.0":
   version "9.2.1"
   resolved "https://registry.yarnpkg.com/@hapi/hoek/-/hoek-9.2.1.tgz#9551142a1980503752536b5050fd99f4a7f13b17"
@@ -3023,18 +3035,6 @@
   integrity sha512-s1zLBjWhdEI2zwaoSgyOFoKSl109CUcVBCc7biPJ3aAf6LGLU6szDvi31JPU7bxfla2lqfhjbbg/5DdFNxOwHw==
   dependencies:
     "@octokit/openapi-types" "^11.2.0"
-
-"@pancakeswap/sdk@^2.4.5":
-  version "2.4.5"
-  resolved "https://registry.yarnpkg.com/@pancakeswap/sdk/-/sdk-2.4.5.tgz#783c02efc7ca89d2297b0b07040639d90c3e610d"
-  integrity sha512-qfHOPGXitDQ5y1dmYloe6UQe/0Ki0enow4MLtr5W49Jl7ZXr8oB6XV7usYtT63R7vqLSKY83rd8Wyw18vxP7dA==
-  dependencies:
-    big.js "^5.2.2"
-    decimal.js-light "^2.5.0"
-    jsbi "^3.1.4"
-    tiny-invariant "^1.1.0"
-    tiny-warning "^1.0.3"
-    toformat "^2.0.0"
 
 "@pedrouid/environment@^1.0.1":
   version "1.0.1"

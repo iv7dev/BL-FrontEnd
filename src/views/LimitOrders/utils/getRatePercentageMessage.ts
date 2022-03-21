@@ -1,4 +1,4 @@
-import { Percent } from '@pancakeswap/sdk'
+import { Percent } from '@genesysnetwork/sdk'
 import { TranslateFunction } from 'contexts/Localization/types'
 
 export enum PercentageDirection {

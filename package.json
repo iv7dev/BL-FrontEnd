@@ -1,7 +1,7 @@
 {
   "name": "genesysnetwork-dex",
   "description": "Powered by Lord Vegeta. #nohayretroceso",
-  "keywords": [ ],
+  "keywords": [],
   "author": "Crypto Club - Blue Lotus DAO",
   "license": "ISC",
   "version": "1.0.0",
@@ -54,8 +54,8 @@
     "@ethersproject/strings": "^5.5.0",
     "@ethersproject/units": "^5.5.0",
     "@gelatonetwork/limit-orders-lib": "^4.1.0",
+    "@genesysnetwork/sdk": "^0.0.2",
     "@next/bundle-analyzer": "^12.0.7",
-    "@pancakeswap/sdk": "^2.4.5",
     "@reduxjs/toolkit": "^1.5.0",
     "@sentry/nextjs": "^6.17.9",
     "@uniswap/token-lists": "^1.0.0-beta.19",

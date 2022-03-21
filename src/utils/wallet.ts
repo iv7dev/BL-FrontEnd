@@ -1,7 +1,7 @@
 // Set of helper functions to facilitate wallet setup
 
 import { ExternalProvider } from '@ethersproject/providers'
-import { ChainId } from '@pancakeswap/sdk'
+import { ChainId } from '@genesysnetwork/sdk'
 import { BASE_URL, BASE_BSC_SCAN_URLS } from 'config'
 import { nodes } from './getRpcUrl'
 
