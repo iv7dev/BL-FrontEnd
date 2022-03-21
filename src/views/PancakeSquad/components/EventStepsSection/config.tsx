@@ -35,7 +35,9 @@ const stepsConfigBuilder = ({ t, userInfos, eventInfos, userStatus, account, the
         eventStatus: [SaleStatusEnum.Pending, SaleStatusEnum.Premint],
       }),
       title: t('Activate your profile'),
-      bodyText: [t('You’ll need an active PancakeSwap Profile to buy Minting Tickets and mint a Pancake Squad NFT!')],
+      bodyText: [
+        t('You’ll need an active Genesys Network Profile to buy Minting Tickets and mint a Genesys Squad NFT!'),
+      ],
       buttons: (
         <>
           <ActivateProfileButton userStatus={userStatus} t={t} />
@@ -50,8 +52,8 @@ const stepsConfigBuilder = ({ t, userInfos, eventInfos, userStatus, account, the
         hasProfileActivated,
         eventStatus: [SaleStatusEnum.Pending, SaleStatusEnum.Premint],
       }),
-      title: t('Hold CAKE'),
-      bodyText: [t('Each NFT costs CAKE to mint. Remember you also need BNB to cover transaction fees too!')],
+      title: t('Hold GSYS'),
+      bodyText: [t('Each NFT costs GSYS to mint. Remember you also need BNB to cover transaction fees too!')],
       buttons: (
         <>
           <Button
@@ -60,7 +62,7 @@ const stepsConfigBuilder = ({ t, userInfos, eventInfos, userStatus, account, the
             target="_blank"
             width="100%"
           >
-            {t('Buy CAKE')}
+            {t('Buy GSYS')}
           </Button>
         </>
       ),
@@ -76,10 +78,10 @@ const stepsConfigBuilder = ({ t, userInfos, eventInfos, userStatus, account, the
       bodyText: [
         t('Buy Squad Tickets, while stocks last. You’ll use them in step 4.'),
         `04:00 UTC, Oct. 7 ${t(
-          'Pre-sale: Wallets which held “Gen 0” Pancake Bunnies NFTs (bunnyID 0,1,2,3,4) at a snapshot taken some time between 12 and 2 hours before the presale begins can purchase one Squad Ticket per Gen 0 NFT.',
+          'Pre-sale: Wallets which held “Gen 0” Genesys Bunnies NFTs (bunnyID 0,1,2,3,4) at a snapshot taken some time between 12 and 2 hours before the presale begins can purchase one Squad Ticket per Gen 0 NFT.',
         )}`,
         `08:00 UTC, Oct. 7 ${t(
-          'Public Sale: Any wallet with an active Pancake Profile can purchase up to 10 Squad Tickets, while stocks last.',
+          'Public Sale: Any wallet with an active Genesys Profile can purchase up to 10 Squad Tickets, while stocks last.',
         )}`,
       ],
       buttons: (
@@ -116,7 +118,7 @@ const stepsConfigBuilder = ({ t, userInfos, eventInfos, userStatus, account, the
       }),
       title: t('Claim Phase'),
       bodyText: [
-        t('During this phase, any wallet holding a Squad Ticket can redeem their ticket to claim a Pancake Squad NFT.'),
+        t('During this phase, any wallet holding a Squad Ticket can redeem their ticket to claim a Genesys Squad NFT.'),
       ],
       buttons: (
         <>

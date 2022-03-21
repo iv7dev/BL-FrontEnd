@@ -56,7 +56,7 @@ const FarmsPoolsRow = () => {
     }
 
     if (pool.sousId === 0) {
-      return t('Manual CAKE')
+      return t('Manual GSYS')
     }
 
     return t('Stake %stakingSymbol% - Earn %earningSymbol%', {

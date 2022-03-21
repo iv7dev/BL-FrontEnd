@@ -1,5 +1,5 @@
 {
-  "name": "PancakeSwap Default List",
+  "name": "Genesys Network Default List",
   "timestamp": "2022-01-26T11:45:09Z",
   "version": {
     "major": 4,
@@ -8,7 +8,10 @@
   },
   "tags": {},
   "logoURI": "https://pancakeswap.finance/logo.png",
-  "keywords": ["pancake", "default"],
+  "keywords": [
+    "pancake",
+    "default"
+  ],
   "tokens": [
     {
       "name": "WBNB Token",
@@ -51,7 +54,7 @@
       "logoURI": "https://pancakeswap.finance/images/tokens/0x55d398326f99059fF775485246999027B3197955.png"
     },
     {
-      "name": "PancakeSwap Token",
+      "name": "Genesys Network Token",
       "symbol": "CAKE",
       "address": "0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82",
       "chainId": 56,
@@ -75,7 +78,7 @@
       "logoURI": "https://pancakeswap.finance/images/tokens/0x4BD17003473389A42DAF6a0a729f6Fdb328BbBd7.png"
     },
     {
-      "name": "Pancake Bunny",
+      "name": "Genesys Bunny",
       "symbol": "BUNNY",
       "address": "0xC9849E6fdB743d08fAeE3E34dd2D1bc69EA11a51",
       "chainId": 56,
@@ -123,7 +126,7 @@
       "logoURI": "https://pancakeswap.finance/images/tokens/0xA7f552078dcC247C2684336020c03648500C6d9F.png"
     },
     {
-      "name": "PancakeSwap Token",
+      "name": "Genesys Network Token",
       "symbol": "CAKE",
       "address": "0xa35062141Fa33BCA92Ce69FeD37D0E8908868AAe",
       "chainId": 97,

@@ -2,7 +2,7 @@ import { PancakeCollectionKey, PancakeCollections } from './types'
 
 const pancakeCollections: PancakeCollections = {
   [PancakeCollectionKey.PANCAKE]: {
-    name: 'Pancake Bunnies',
+    name: 'Genesys Bunnies',
     slug: 'pancake-bunnies',
     address: {
       56: '0xDf7952B35f24aCF7fC0487D01c8d5690a60DBa07',
@@ -10,8 +10,8 @@ const pancakeCollections: PancakeCollections = {
     },
   },
   [PancakeCollectionKey.SQUAD]: {
-    name: 'Pancake Squad',
-    description: "PancakeSwap's first official generative NFT collection.. Join the squad.",
+    name: 'Genesys Squad',
+    description: "Genesys Network's first official generative NFT collection.. Join the squad.",
     slug: 'pancake-squad',
     address: {
       56: '0x0a8901b0E25DEb55A87524f0cC164E9644020EBA',

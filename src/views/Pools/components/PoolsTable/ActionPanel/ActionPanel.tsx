@@ -214,7 +214,7 @@ const ActionPanel: React.FC<ActionPanelProps> = ({ account, pool, userDataLoaded
       <RequirementSection mb="8px">
         <Text>{t('Requirement')}:</Text>
         <Text textAlign={['right', , , , 'left']}>
-          {profileRequirement.required && t('Pancake Profile')}{' '}
+          {profileRequirement.required && t('Genesys Profile')}{' '}
           {profileRequirement.required && profileRequirement.thresholdPoints.gt(0) && (
             <Text as="span" display={['none', , , , 'inline']}>
               {' & '}
@@ -341,7 +341,7 @@ const ActionPanel: React.FC<ActionPanelProps> = ({ account, pool, userDataLoaded
           <Text mt="4px" mb="16px" color="textSubtle">
             {vaultKey
               ? vaultPoolConfig[vaultKey].description
-              : `${t('Earn')} CAKE ${t('Stake').toLocaleLowerCase()} CAKE`}
+              : `${t('Earn')} GSYS ${t('Stake').toLocaleLowerCase()} GSYS`}
           </Text>
         )}
         {pool.vaultKey ? (

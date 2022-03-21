@@ -84,7 +84,7 @@ const Mint: React.FC = () => {
       <Text as="p">{t('Every profile starts by making a “starter” collectible (NFT).')}</Text>
       <Text as="p">{t('This starter will also become your first profile picture.')}</Text>
       <Text as="p" mb="24px">
-        {t('You can change your profile pic later if you get another approved Pancake Collectible.')}
+        {t('You can change your profile pic later if you get another approved Genesys Collectible.')}
       </Text>
       <Card mb="24px">
         <CardBody>
@@ -95,7 +95,7 @@ const Mint: React.FC = () => {
             {t('Choose wisely: you can only ever make one starter collectible!')}
           </Text>
           <Text as="p" mb="24px" color="textSubtle">
-            {t('Cost: %num% CAKE', { num: formatUnits(MINT_COST) })}
+            {t('Cost: %num% GSYS', { num: formatUnits(MINT_COST) })}
           </Text>
           {starterNfts.map((nft) => {
             const handleChange = (value: string) => setSelectedBunnyId(value)
@@ -116,7 +116,7 @@ const Mint: React.FC = () => {
           })}
           {!hasMinimumCakeRequired && (
             <Text color="failure" mb="16px">
-              {t('A minimum of %num% CAKE is required', { num: formatUnits(MINT_COST) })}
+              {t('A minimum of %num% GSYS is required', { num: formatUnits(MINT_COST) })}
             </Text>
           )}
           <ApproveConfirmButtons

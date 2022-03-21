@@ -23,7 +23,7 @@ const nftSaleConfigBuilder = ({ t, saleStatus, startTimestamp }: nftSaleType) =>
           text: getEventText({ saleStatus, eventStatus: [SaleStatusEnum.Presale], startTimestamp, t }),
           altText: getAltText({ t, saleStatus, eventStatus: [SaleStatusEnum.Presale], startTimestamp }),
           infoText: t(
-            'Pre-sale: Wallets which held “Gen 0” Pancake Bunnies NFTs (bunnyID 0,1,2,3,4) at a snapshot taken some time between 12 and 2 hours before the presale begins can purchase one Squad Ticket per Gen 0 NFT.',
+            'Pre-sale: Wallets which held “Gen 0” Genesys Bunnies NFTs (bunnyID 0,1,2,3,4) at a snapshot taken some time between 12 and 2 hours before the presale begins can purchase one Squad Ticket per Gen 0 NFT.',
           ),
         },
         {
@@ -45,7 +45,7 @@ const nftSaleConfigBuilder = ({ t, saleStatus, startTimestamp }: nftSaleType) =>
             startTimestamp,
           }),
           infoText: t(
-            'Public Sale: Any wallet with an active Pancake Profile can purchase up to 10 Squad Tickets, while stocks last.',
+            'Public Sale: Any wallet with an active Genesys Profile can purchase up to 10 Squad Tickets, while stocks last.',
           ),
         },
         {
@@ -53,7 +53,7 @@ const nftSaleConfigBuilder = ({ t, saleStatus, startTimestamp }: nftSaleType) =>
           text: getEventText({ saleStatus, eventStatus: [SaleStatusEnum.Claim], t }),
           altText: getAltText({ t, saleStatus, eventStatus: [SaleStatusEnum.Claim] }),
           infoText: t(
-            'During this phase, any wallet holding a Squad Ticket can redeem their ticket to mint a Pancake Squad NFT.',
+            'During this phase, any wallet holding a Squad Ticket can redeem their ticket to mint a Genesys Squad NFT.',
           ),
         },
       ]

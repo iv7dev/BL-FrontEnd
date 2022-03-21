@@ -21,7 +21,7 @@ const MakeProfile: React.FC<CompetitionProps> = ({ onDismiss }) => {
         {t('Make a profile!')}
       </Heading>
       <Text color="textSubtle">
-        {t('It looks like you’ve disabled your account by removing your Pancake Collectible (NFT) profile picture.')}
+        {t('It looks like you’ve disabled your account by removing your Genesys Collectible (NFT) profile picture.')}
       </Text>
       <Button mt="24px" width="100%" onClick={handleClick}>
         {t('Make a profile!')}

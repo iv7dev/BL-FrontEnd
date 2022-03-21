@@ -67,7 +67,7 @@ const ProfileNftModal: React.FC<ProfileNftModalProps> = ({ nft, onDismiss, onSuc
           </Flex>
         </Flex>
         <TextWrapper p="24px 16px" flexDirection="column">
-          <Text mb="16px">{t("You're using this NFT as your Pancake Profile picture")}</Text>
+          <Text mb="16px">{t("You're using this NFT as your Genesys Profile picture")}</Text>
           <Text color="textSubtle" mb="16px" fontSize="14px">
             {t(
               'Removing it will suspend your profile, and you won’t be able to earn points, participate in team activities, or be eligible for new NFT drops.',

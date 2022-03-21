@@ -5,7 +5,7 @@ const bunniesConfig = (t: ContextApi['t']) => {
     headingText: t('10,000 bunnies.'),
     subHeadingText: t('ZERO duplicates.'),
     bodyText: [
-      t('Every Pancake Squad bunny is different.'),
+      t('Every Genesys Squad bunny is different.'),
       t(
         'They’re all randomly generated from over 200 different features, with over eight BILLION possible combinations, so that no bunny is ever exactly alike.',
       ),

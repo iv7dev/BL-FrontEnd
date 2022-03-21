@@ -95,10 +95,10 @@ const IfoPoolVaultCardMobile: React.FC = () => {
                 {t('Staked')}
               </Text>
               <Text small bold>
-                IFO CAKE
+                IFO GSYS
               </Text>
               <Text color="textSubtle" fontSize="12px">
-                {t('Stake')} CAKE
+                {t('Stake')} GSYS
               </Text>
             </Box>
           </StyledTokenContent>

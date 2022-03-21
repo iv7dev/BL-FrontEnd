@@ -56,7 +56,7 @@ const SaleProgress: React.FC<PreEventProps> = ({
       )}
       <Text color={lightColors.invertedContrast} mb="24px" bold>
         {isMintCompleted
-          ? t('All 10,000 Pancake Squad NFTs have now been minted!')
+          ? t('All 10,000 Genesys Squad NFTs have now been minted!')
           : saleProgressTextMapping(t, saleStatus, remainingTickets.toString(), maxSupply.toString())}
       </Text>
       {!isMintCompleted && (
