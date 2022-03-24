@@ -6,8 +6,8 @@ import { useTranslation } from 'contexts/Localization'
 import useTheme from 'hooks/useTheme'
 import Image from 'next/image'
 import styled, { keyframes } from 'styled-components'
-import bunnyImage from '../../../../public/logo.png'
-import CompositeImage, { CompositeImageProps } from './CompositeImage'
+import bunnyImage from '../../../../public/images/gsys/home1.png' // imagen
+// import CompositeImage, { CompositeImageProps } from './CompositeImage'
 import { SlideSvgDark, SlideSvgLight } from './SlideSvg'
 
 const flyingAnim = () => keyframes`
@@ -22,17 +22,17 @@ const flyingAnim = () => keyframes`
   }
 `
 
-const fading = () => keyframes`
-  from {
-    opacity: 0.9;
-  }
-  50% {
-    opacity: 0.1;
-  }
-  to {
-    opacity: 0.9;
-  }
-`
+// const fading = () => keyframes`
+//   from {
+//     opacity: 0.9;
+//   }
+//   50% {
+//     opacity: 0.1;
+//   }
+//   to {
+//     opacity: 0.9;
+//   }
+// `
 
 const BgWrapper = styled.div`
   z-index: -1;
@@ -59,35 +59,35 @@ const BunnyWrapper = styled.div`
   }
 `
 
-const StarsWrapper = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
+// const StarsWrapper = styled.div`
+//   position: absolute;
+//   top: 0;
+//   left: 0;
 
-  & :nth-child(2) {
-    animation: ${fading} 2s ease-in-out infinite;
-    animation-delay: 1s;
-  }
+//   & :nth-child(2) {
+//     animation: ${fading} 2s ease-in-out infinite;
+//     animation-delay: 1s;
+//   }
 
-  & :nth-child(3) {
-    animation: ${fading} 5s ease-in-out infinite;
-    animation-delay: 0.66s;
-  }
+//   & :nth-child(3) {
+//     animation: ${fading} 5s ease-in-out infinite;
+//     animation-delay: 0.66s;
+//   }
 
-  & :nth-child(4) {
-    animation: ${fading} 2.5s ease-in-out infinite;
-    animation-delay: 0.33s;
-  }
-`
+//   & :nth-child(4) {
+//     animation: ${fading} 2.5s ease-in-out infinite;
+//     animation-delay: 0.33s;
+//   }
+// `
 
-const starsImage: CompositeImageProps = {
-  path: '/images/home/lunar-bunny/',
-  attributes: [
-    { src: 'star-l', alt: '3D Star' },
-    { src: 'star-r', alt: '3D Star' },
-    { src: 'star-top-r', alt: '3D Star' },
-  ],
-}
+// const starsImage: CompositeImageProps = {
+//   path: '/images/home/lunar-bunny/',
+//   attributes: [
+//     { src: 'star-l', alt: '3D Star' },
+//     { src: 'star-r', alt: '3D Star' },
+//     { src: 'star-top-r', alt: '3D Star' },
+//   ],
+// }
 
 const Hero = () => {
   const { t } = useTranslation()
@@ -129,11 +129,11 @@ const Hero = () => {
           position="relative"
         >
           <BunnyWrapper>
-            <Image src={bunnyImage} priority placeholder="blur" alt={t('Lunar bunny')} />
+            <Image src={bunnyImage} priority placeholder="blur" alt={t('Blue Lotus')} />
           </BunnyWrapper>
-          <StarsWrapper>
+          {/* <StarsWrapper>
             <CompositeImage {...starsImage} />
-          </StarsWrapper>
+          </StarsWrapper> */}
         </Flex>
       </Flex>
     </>
