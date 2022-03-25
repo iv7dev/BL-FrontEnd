@@ -37,10 +37,10 @@ const Stats = () => {
     <Flex justifyContent="center" alignItems="center" flexDirection="column">
       <GradientLogo height="48px" width="48px" mb="24px" />
       <Heading textAlign="center" scale="xl">
-        {t('Used by millions.')}
+        {t('The Number ONE DAO in the Multichain.')}
       </Heading>
       <Heading textAlign="center" scale="xl" mb="32px">
-        {t('Trusted with billions.')}
+        {t('Multichain. Easy and Fast.')}
       </Heading>
       <Text textAlign="center" color="textSubtle">
         {t('Genesys Network has the most users of any decentralized platform, ever.')}

@@ -3,18 +3,24 @@ export default {
     97: '0x1d32c2945C8FDCBc7156c553B7cEa4325a17f4f9',
     56: '0x4bF58629382904dAc0531Fb57dffB35D128A97b9',
   },
-  sousChef: {
-    97: '0xd3af5fe61dbaf8f73149bfcfa9fb653ff096029a',
-    56: '0x6ab8463a4185b80905e05a9ff80a2d6b714b9e95',
-  },
-  lotteryV2: {
-    97: '0x5790c3534F30437641541a0FA04C992799602998',
-    56: '0x5aF6D33DE2ccEC94efb1bDF8f92Bd58085432d2c',
+  cakeVault: {
+    56: '0xa80240Eb5d7E05d3F250cF000eEc0891d00b51CC',
+    97: '',
   },
   multiCall: {
     56: '0xfF6FD90A470Aaa0c1B8A54681746b07AcdFedc9B',
     97: '0x8F3273Fb89B075b1645095ABaC6ed17B2d4Bc576',
   },
+  // sousChef: {
+  //   97: '0xd3af5fe61dbaf8f73149bfcfa9fb653ff096029a',
+  //   56: '0x6ab8463a4185b80905e05a9ff80a2d6b714b9e95',
+  // },
+
+  lotteryV2: {
+    97: '0x5790c3534F30437641541a0FA04C992799602998',
+    56: '0x5aF6D33DE2ccEC94efb1bDF8f92Bd58085432d2c',
+  },
+
   pancakeProfile: {
     56: '0xDf4dBf6536201370F95e06A0F8a7a70fE40E388a',
     97: '0x4B683C7E13B6d5D7fd1FeA9530F451954c1A7c8A',
@@ -50,10 +56,6 @@ export default {
   easterNft: {
     56: '0x23c41D28A239dDCAABd1bb1deF8d057189510066',
     97: '0x24ec6962dbe874F6B67B5C50857565667fA0854F',
-  },
-  cakeVault: {
-    56: '0xa80240Eb5d7E05d3F250cF000eEc0891d00b51CC',
-    97: '',
   },
   ifoPool: {
     56: '0x1B2A2f6ed4A1401E8C73B4c2B6172455ce2f78E8',

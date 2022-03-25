@@ -6,7 +6,7 @@ const cakeLpAddress = '0x0eD7e52944161450477ee417DE9Cd3a859b14fD0'
 const CakeBalanceStrategy = {
   name: 'erc20-balance-of',
   params: {
-    address: tokens.cake.address,
+    address: tokens.gsys.address,
     decimals: 0,
     symbol: tokens.cake.symbol,
   },

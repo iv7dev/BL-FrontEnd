@@ -242,7 +242,7 @@
   },
   {
     "inputs": [],
-    "name": "cake",
+    "name": "gsys",
     "outputs": [
       {
         "internalType": "contract CakeToken",

@@ -45,7 +45,7 @@ const Grid = styled.div`
   }
 `
 
-const emissionsPerBlock = 14.25
+const emissionsPerBlock = 3
 
 const CakeDataRow = () => {
   const { t } = useTranslation()
@@ -59,9 +59,9 @@ const CakeDataRow = () => {
   } = useSWR(
     loadData ? ['cakeDataRow'] : null,
     async () => {
-      const totalSupplyCall = { address: tokens.cake.address, name: 'totalSupply' }
+      const totalSupplyCall = { address: tokens.gsys.address, name: 'totalSupply' }
       const burnedTokenCall = {
-        address: tokens.cake.address,
+        address: tokens.gsys.address,
         name: 'balanceOf',
         params: ['0x000000000000000000000000000000000000dEaD'],
       }

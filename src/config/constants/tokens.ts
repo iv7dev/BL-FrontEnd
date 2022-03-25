@@ -220,11 +220,11 @@ export const mainnetTokens = defineTokens({
   ),
   syrup: new Token(
     MAINNET,
-    '0x009cF7bC57584b7998236eff51b98A168DceA9B0',
+    '0xA04b80973771ac9895D94c9992E5aA4Eaac3b4Cc',
     18,
-    'SYRUP',
-    'SyrupBar Token',
-    'https://pancakeswap.finance/',
+    'GBAR',
+    'GsysBar Token',
+    'https://genesys.network/',
   ),
   pha: new Token(
     MAINNET,

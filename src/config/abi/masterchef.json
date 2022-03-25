@@ -18,7 +18,7 @@
       },
       {
         "internalType": "uint256",
-        "name": "_cakePerBlock",
+        "name": "_gsysPerBlock",
         "type": "uint256"
       },
       {
@@ -162,7 +162,7 @@
   },
   {
     "inputs": [],
-    "name": "cake",
+    "name": "gsys",
     "outputs": [
       {
         "internalType": "contract CakeToken",
@@ -175,7 +175,7 @@
   },
   {
     "inputs": [],
-    "name": "cakePerBlock",
+    "name": "gsysPerBlock",
     "outputs": [
       {
         "internalType": "uint256",
@@ -352,7 +352,7 @@
         "type": "address"
       }
     ],
-    "name": "pendingCake",
+    "name": "pendingGsys",
     "outputs": [
       {
         "internalType": "uint256",

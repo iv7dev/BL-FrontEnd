@@ -3,9 +3,8 @@ import { PageMeta } from './types'
 
 export const DEFAULT_META: PageMeta = {
   title: 'Genesys Network',
-  description:
-    'The most popular AMM on BSC by user count! Earn GSYS through yield farming or win it in the Lottery, then stake it in Syrup Pools to earn more tokens! Initial Farm Offerings (new token launch model pioneered by Genesys Network), NFTs, and more, on a platform you can trust.',
-  image: 'https://pancakeswap.finance/images/hero.png',
+  description: 'The best next generation AMM on BNB Chain. Earn GSYS through yield farming.',
+  image: 'https://genesys.network/images/logo.png',
 }
 
 export const getCustomMeta = (path: string, t: ContextApi['t']): PageMeta => {
@@ -106,17 +105,17 @@ export const getCustomMeta = (path: string, t: ContextApi['t']): PageMeta => {
     case '/info':
       return {
         title: `${t('Overview')} | ${t('Genesys Network Info & Analytics')}`,
-        description: 'View statistics for Pancakeswap exchanges.',
+        description: 'View statistics for Genesys exchanges.',
       }
     case '/info/pools':
       return {
         title: `${t('Pools')} | ${t('Genesys Network Info & Analytics')}`,
-        description: 'View statistics for Pancakeswap exchanges.',
+        description: 'View statistics for Genesys exchanges.',
       }
     case '/info/tokens':
       return {
         title: `${t('Tokens')} | ${t('Genesys Network Info & Analytics')}`,
-        description: 'View statistics for Pancakeswap exchanges.',
+        description: 'View statistics for Genesys exchanges.',
       }
     case '/nfts':
       return {

@@ -2,6 +2,15 @@
  * @see https://github.com/pancakeswap/pancake-frontend/blob/develop/src/config/constants/tokens.ts
  */
 const tokens = {
+  gsys: {
+    symbol: "GSYS",
+    address: {
+      56: "0x7255fbecd4C672E5aE2803532014d86b5DFA0609",
+      97: "0xa35062141Fa33BCA92Ce69FeD37D0E8908868AAe",
+    },
+    decimals: 18,
+    projectLink: "https://genesys.network/",
+  },
   cake: {
     symbol: "CAKE",
     address: {

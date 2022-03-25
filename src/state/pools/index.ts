@@ -103,19 +103,19 @@ export const fetchCakePoolPublicDataAsync = () => async (dispatch, getState) => 
 
 export const fetchCakePoolUserDataAsync = (account: string) => async (dispatch) => {
   const allowanceCall = {
-    address: tokens.cake.address,
+    address: tokens.gsys.address,
     name: 'allowance',
     params: [account, cakePoolAddress],
   }
   const balanceOfCall = {
-    address: tokens.cake.address,
+    address: tokens.gsys.address,
     name: 'balanceOf',
     params: [account],
   }
   const cakeContractCalls = [allowanceCall, balanceOfCall]
   const [[allowance], [stakingTokenBalance]] = await multicallv2(cakeAbi, cakeContractCalls)
 
-  const masterChefCalls = ['pendingCake', 'userInfo'].map((method) => ({
+  const masterChefCalls = ['pendingGsys', 'userInfo'].map((method) => ({
     address: getMasterChefAddress(),
     name: method,
     params: ['0', account],

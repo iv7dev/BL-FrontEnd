@@ -56,12 +56,12 @@ export const cakeSectionData = (t: TranslateFunction): SalesSectionProps => ({
   ),
   reverse: false,
   primaryButton: {
-    to: '/swap?outputCurrency=0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
+    to: '/swap?outputCurrency=0x7255fbecd4C672E5aE2803532014d86b5DFA0609',
     text: t('Buy GSYS'),
     external: false,
   },
   secondaryButton: {
-    to: 'https://docs.pancakeswap.finance/tokenomics/cake',
+    to: 'https://genesys-network-1.gitbook.io/genesys-blockchain/tokenomics/genesys',
     text: t('Learn'),
     external: true,
   },
