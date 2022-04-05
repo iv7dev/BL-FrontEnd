@@ -1,4 +1,4 @@
-import { Token } from '@pancakeswap/sdk'
+import { Token } from '@genesysnetwork/sdk'
 import SwapWarningTokens from 'config/constants/swapWarningTokens'
 
 const swapWarningTokens = Object.values(SwapWarningTokens)
