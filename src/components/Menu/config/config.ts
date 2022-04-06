@@ -39,7 +39,7 @@ const config: (t: ContextApi['t'], languageCode?: string) => ConfigMenuItemsType
       },
       // {
       //   label: t('Perpetual'),
-      //   href: `https://perp.pancakeswap.finance/${perpLangMap(languageCode)}/futures/BTCUSDT`,
+      //   href: `https://perp.genesys.network/${perpLangMap(languageCode)}/futures/BTCUSDT`,
       //   type: DropdownMenuItemType.EXTERNAL_LINK,
       // },
     ],
@@ -153,7 +153,7 @@ const config: (t: ContextApi['t'], languageCode?: string) => ConfigMenuItemsType
   //     },
   //     {
   //       label: t('Docs'),
-  //       href: 'https://docs.pancakeswap.finance',
+  //       href: 'https://docs.genesys.network',
   //       type: DropdownMenuItemType.EXTERNAL_LINK,
   //     },
   //   ],

@@ -22,7 +22,7 @@ const NotOkNFT = ({ admissionProfile }) => {
         <>
           <LinkExternal
             style={{ display: 'inline' }}
-            href={`https://pancakeswap.finance/nfts/collections/${admissionProfile}`}
+            href={`https://genesys.network/nfts/collections/${admissionProfile}`}
           >
             {t('Genesys Squad NFT')}
           </LinkExternal>
@@ -50,7 +50,7 @@ const NotOkProfilePoints = ({ pointThreshold }) => {
           <br />
           <LinkExternal
             style={{ display: 'inline' }}
-            href={`https://pancakeswap.finance/nfts/profile/${account}/achievements/`}
+            href={`https://genesys.network/nfts/profile/${account}/achievements/`}
           >
             {t('Genesys Profile')}
           </LinkExternal>

@@ -7,12 +7,12 @@ export const footerLinks: (t: ContextApi['t']) => FooterLinkType[] = (t) => [
     items: [
       {
         label: t('Contact'),
-        href: 'https://docs.pancakeswap.finance/contact-us',
+        href: 'https://docs.genesys.network/contact-us',
         isHighlighted: true,
       },
       {
         label: t('Brand'),
-        href: 'https://docs.pancakeswap.finance/brand',
+        href: 'https://docs.genesys.network/brand',
       },
       {
         label: t('Blog'),
@@ -20,11 +20,11 @@ export const footerLinks: (t: ContextApi['t']) => FooterLinkType[] = (t) => [
       },
       {
         label: t('Community'),
-        href: 'https://docs.pancakeswap.finance/contact-us/telegram',
+        href: 'https://docs.genesys.network/contact-us/telegram',
       },
       {
         label: t('GSYS token'),
-        href: 'https://docs.pancakeswap.finance/tokenomics/cake',
+        href: 'https://docs.genesys.network/tokenomics/cake',
       },
       {
         label: '—',
@@ -40,15 +40,15 @@ export const footerLinks: (t: ContextApi['t']) => FooterLinkType[] = (t) => [
     items: [
       {
         label: t('Customer Support'),
-        href: 'https://docs.pancakeswap.finance/contact-us/customer-support',
+        href: 'https://docs.genesys.network/contact-us/customer-support',
       },
       {
         label: t('Troubleshooting'),
-        href: 'https://docs.pancakeswap.finance/help/troubleshooting',
+        href: 'https://docs.genesys.network/help/troubleshooting',
       },
       {
         label: t('Guides'),
-        href: 'https://docs.pancakeswap.finance/get-started',
+        href: 'https://docs.genesys.network/get-started',
       },
     ],
   },
@@ -61,19 +61,19 @@ export const footerLinks: (t: ContextApi['t']) => FooterLinkType[] = (t) => [
       },
       {
         label: t('Documentation'),
-        href: 'https://docs.pancakeswap.finance',
+        href: 'https://docs.genesys.network',
       },
       {
         label: t('Bug Bounty'),
-        href: 'https://docs.pancakeswap.finance/code/bug-bounty',
+        href: 'https://docs.genesys.network/code/bug-bounty',
       },
       {
         label: t('Audits'),
-        href: 'https://docs.pancakeswap.finance/help/faq#is-pancakeswap-safe-has-pancakeswap-been-audited',
+        href: 'https://docs.genesys.network/help/faq#is-pancakeswap-safe-has-pancakeswap-been-audited',
       },
       {
         label: t('Careers'),
-        href: 'https://docs.pancakeswap.finance/hiring/become-a-chef',
+        href: 'https://docs.genesys.network/hiring/become-a-chef',
       },
     ],
   },

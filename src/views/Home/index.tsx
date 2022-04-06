@@ -10,7 +10,7 @@ import { swapSectionData, earnSectionData, cakeSectionData } from './components/
 import MetricsSection from './components/MetricsSection'
 import SalesSection from './components/SalesSection'
 // import WinSection from './components/WinSection'
-import FarmsPoolsRow from './components/FarmsPoolsRow'
+// import FarmsPoolsRow from './components/FarmsPoolsRow'
 import Footer from './components/Footer'
 import CakeDataRow from './components/CakeDataRow'
 import { WedgeTopLeft, InnerWedgeWrapper, OuterWedgeWrapper, WedgeTopRight } from './components/WedgeSvgs'
@@ -56,8 +56,8 @@ const Home: React.FC = () => {
         innerProps={{ style: { margin: '0', width: '100%' } }}
         background={
           theme.isDark
-            ? 'radial-gradient(103.12% 50% at 50% 50%, #F6F0FF 0%, #191326 100%)'
-            : 'linear-gradient(139.73deg, #191326 0%, #F6F0FF 100%)'
+            ? 'radial-gradient(103.12% 50% at 50% 50%, #D7CAEC 0%, #191326 100%)'
+            : 'linear-gradient(139.73deg, #191326 0%, #D7CAEC 100%)'
         }
         index={2}
         hasCurvedDivider={false}
@@ -70,69 +70,55 @@ const Home: React.FC = () => {
         {/* <MultipleBanner /> */}
         <Hero />
       </StyledHeroSection>
+
       <PageSection
         innerProps={{ style: { margin: '0', width: '100%' } }}
         background={
           theme.isDark
-            ? 'linear-gradient(180deg, #09070C 22%, #D7CAEC 100%)'
-            : 'linear-gradient(180deg, #FFFFFF 22%, #D7CAEC 100%)'
+            ? 'linear-gradient(180deg, #191326 22%, #D7CAEC 100%)'
+            : 'linear-gradient(180deg, #FFFFFF 22%, #6825b7 100%)'
         }
         index={2}
         hasCurvedDivider={false}
       >
         <MetricsSection />
       </PageSection>
+
       <PageSection
         innerProps={{ style: HomeSectionContainerStyles }}
-        background={theme.colors.background}
+        background={
+          theme.isDark
+            ? 'linear-gradient(180deg, #6a18b2 22%, #D7CAEC 100%)'
+            : 'linear-gradient(180deg, #6825b7 22%, #D7CAEC 100%)'
+        }
         index={2}
         hasCurvedDivider={false}
       >
         <OuterWedgeWrapper>
-          <InnerWedgeWrapper top fill={theme.isDark ? '#201335' : '#D8CBED'}>
+          <InnerWedgeWrapper top fill={theme.isDark ? '#6a18b2' : '#6825b7'}>
             <WedgeTopLeft />
           </InnerWedgeWrapper>
         </OuterWedgeWrapper>
         <SalesSection {...swapSectionData(t)} />
       </PageSection>
-      <PageSection
-        innerProps={{ style: HomeSectionContainerStyles }}
-        background={theme.colors.gradients.cardHeader}
-        index={2}
-        hasCurvedDivider={false}
-      >
-        <OuterWedgeWrapper>
-          <InnerWedgeWrapper width="150%" top fill={theme.colors.background}>
-            <WedgeTopRight />
-          </InnerWedgeWrapper>
-        </OuterWedgeWrapper>
-        <SalesSection {...earnSectionData(t)} />
-        <FarmsPoolsRow />
-      </PageSection>
+
       <PageSection
         innerProps={{ style: HomeSectionContainerStyles }}
         background={
           theme.isDark
-            ? 'linear-gradient(180deg, #0B4576 0%, #091115 100%)'
-            : 'linear-gradient(180deg, #6FB6F1 0%, #EAF2F6 100%)'
+            ? 'linear-gradient(180deg, #6825b7 22%, #09070C 100%)'
+            : 'linear-gradient(180deg, #FFFFFF 22%, #D7CAEC 100%)'
         }
-        index={2}
-        hasCurvedDivider={false}
-      >
-        {/* <WinSection /> */}
-      </PageSection>
-      <PageSection
-        innerProps={{ style: HomeSectionContainerStyles }}
-        background={theme.colors.background}
         index={2}
         hasCurvedDivider={false}
       >
         <SalesSection {...cakeSectionData(t)} />
         <CakeDataRow />
       </PageSection>
+
       <PageSection
         innerProps={{ style: HomeSectionContainerStyles }}
-        background="linear-gradient(180deg, #7645D9 0%, #5121B1 100%)"
+        background="linear-gradient(180deg, #6825b7 0%, #6a18b2 100%)"
         index={2}
         hasCurvedDivider={false}
       >

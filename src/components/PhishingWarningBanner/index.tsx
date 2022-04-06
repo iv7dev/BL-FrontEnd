@@ -9,10 +9,10 @@ const Container = styled(Flex)`
   padding: 12px;
   align-items: center;
   background: linear-gradient(0deg, rgba(39, 38, 44, 0.4), rgba(39, 38, 44, 0.4)),
-    linear-gradient(180deg, #ffff 0%, #336699 100%);
+    linear-gradient(180deg, #7250b0 0%, #311f56 100%);
   ${({ theme }) => theme.mediaQueries.md} {
     padding: 0px;
-    background: linear-gradient(180deg, #8051d6 0%, #336699 100%);
+    background: linear-gradient(180deg, #7250b0 0%, #311f56 100%);
   }
 `
 
@@ -77,9 +77,9 @@ const PhishingWarningBanner: React.FC = () => {
         <>
           <InnerContainer>
             <picture>
-              <source type="image/webp" srcSet="/images/gsys/phishing-warning-bunny.webp" />
-              <source type="image/png" srcSet="/images/gsys/phishing-warning-bunny.png" />
-              <img src="/images/gsys/phishing-warning-bunny.png" alt="phishing-warning" width="40px" />
+              <source type="image/webp" srcSet="/images/gsys/phishing3.webp" />
+              <source type="image/png" srcSet="/images/gsys/phishing3.png" />
+              <img src="/images/gsys/phishing3.png" alt="phishing-warning" width="40px" />
             </picture>
             <SpeechBubble>{warningTextComponent}</SpeechBubble>
           </InnerContainer>

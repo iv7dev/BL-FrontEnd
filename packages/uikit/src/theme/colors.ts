@@ -33,7 +33,7 @@ export const lightColors: Colors = {
   input: "#EEEAF4",
   inputSecondary: "#BBB7E5",
   tertiary: "#E6E2ED",
-  text: "#f0f8ff", // page text
+  text: "#000", // page text
   textDisabled: "#BDC2C4",
   textSubtle: "#9379BC", // menu text
   disabled: "#E9EAEB",
@@ -64,7 +64,7 @@ export const darkColors: Colors = {
   input: "#1E0D21",
   inputSecondary: "#3D233F",
   primaryDark: "#1E182D",
-  tertiary: "#0099FF",
+  tertiary: "#fff",
   text: "#F6F0FF",
   textDisabled: "#F6F0FF",
   textSubtle: "#F6F0FF",
