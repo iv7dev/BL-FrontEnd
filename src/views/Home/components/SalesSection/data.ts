@@ -67,12 +67,11 @@ export const cakeSectionData = (t: TranslateFunction): SalesSectionProps => ({
   },
 
   images: {
-    path: '/images/home/cake/',
+    path: '/images/home/flying-pancakes/',
     attributes: [
-      { src: 'bottom-right', alt: t('Small 3d pancake') },
-      { src: 'top-right', alt: t('Small 3d pancake') },
-      { src: 'coin', alt: t('GSYS token') },
-      { src: 'top-left', alt: t('Small 3d pancake') },
+      { src: '2-bottom', alt: 'Genesys flying on the bottom' },
+      { src: '2-top', alt: 'Genesys flying on the top' },
+      { src: '2-right', alt: 'Genesys flying on the right' },
     ],
   },
 })
