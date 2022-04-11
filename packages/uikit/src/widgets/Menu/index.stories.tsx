@@ -93,7 +93,7 @@ const defaultProps = {
   userMenu: <UserMenuComponent account="0xbdda50183d817c3289f895a4472eb475967dc980" />,
   globalMenu: <GlobalMenuComponent />,
   activeItem: "/swap",
-  activeSubItem: "https://exchange.pancakeswap.finance",
+  activeSubItem: "https://exchange.genesys.network",
   buyCakeLabel: "Buy CAKE",
 };
 

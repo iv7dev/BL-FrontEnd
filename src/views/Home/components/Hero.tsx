@@ -6,7 +6,7 @@ import { useTranslation } from 'contexts/Localization'
 import useTheme from 'hooks/useTheme'
 import Image from 'next/image'
 import styled, { keyframes } from 'styled-components'
-import bunnyImage from '../../../../public/images/gsys/genesys4.png' // imagen
+import bunnyImage from '../../../../public/images/gsys/banner1.png' // imagen
 // import CompositeImage, { CompositeImageProps } from './CompositeImage'
 import { SlideSvgDark, SlideSvgLight } from './SlideSvg'
 

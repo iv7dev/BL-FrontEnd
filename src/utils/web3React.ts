@@ -37,7 +37,7 @@ export const connectorsByName = {
     return new WalletLinkConnector({
       url: rpcUrl,
       appName: 'Genesys Network',
-      appLogoUrl: 'https://pancakeswap.com/logo.png',
+      appLogoUrl: 'https://genesys.network/logo.png',
       supportedChainIds: [ChainId.MAINNET, ChainId.TESTNET],
     })
   },
