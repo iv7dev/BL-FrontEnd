@@ -12,7 +12,7 @@ const farms: SerializedFarmConfig[] = [
     pid: 0,
     lpSymbol: 'GSYS',
     lpAddresses: {
-      97: '0x9C21123D94b93361a29B2C2EFB3d5CD8B17e0A9e',
+      97: '0xc8bf24E6a3A3c1007C96831bf89A81Bfe824CC65',
       56: '0x7255fbecd4C672E5aE2803532014d86b5DFA0609',
     },
     token: serializedTokens.syrup,
@@ -22,7 +22,7 @@ const farms: SerializedFarmConfig[] = [
     pid: 251,
     lpSymbol: 'GSYS-BNB LP',
     lpAddresses: {
-      97: '0x3ed8936cAFDF85cfDBa29Fbe5940A5b0524824F4',
+      97: '',
       56: '0x0eD7e52944161450477ee417DE9Cd3a859b14fD0',
     },
     token: serializedTokens.gsys,

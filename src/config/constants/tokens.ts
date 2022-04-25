@@ -2072,6 +2072,14 @@ export const testnetTokens = defineTokens({
     'Wrapped BNB',
     'https://www.binance.com/',
   ),
+  tgsys: new Token(
+    TESTNET,
+    '0xc8bf24E6a3A3c1007C96831bf89A81Bfe824CC65',
+    18,
+    'TGSYS',
+    'Test Genesys Network Token',
+    'https://genesys.network/',
+  ),
   cake: new Token(
     TESTNET,
     '0xa35062141Fa33BCA92Ce69FeD37D0E8908868AAe',
@@ -2090,7 +2098,7 @@ export const testnetTokens = defineTokens({
   ),
   syrup: new Token(
     TESTNET,
-    '0xfE1e507CeB712BDe086f3579d2c03248b2dB77f9',
+    '0xE6f27Fbd3Df8c7424f888a137e935A770BBEB74F',
     18,
     'SYRUP',
     'SyrupBar Token',
