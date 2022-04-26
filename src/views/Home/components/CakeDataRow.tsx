@@ -79,9 +79,9 @@ const CakeDataRow = () => {
       refreshInterval: SLOW_INTERVAL,
     },
   )
-  const cakePriceBusd = usePriceCakeBusd()
-  const mcap = cakePriceBusd.times(cakeSupply)
-  const mcapString = formatLocalisedCompactNumber(mcap.toNumber())
+  // const cakePriceBusd = usePriceCakeBusd()
+  // const mcap = cakePriceBusd.times(cakeSupply)
+  // const mcapString = formatLocalisedCompactNumber(mcap.toNumber())
 
   useEffect(() => {
     if (isIntersecting) {
@@ -112,11 +112,11 @@ const CakeDataRow = () => {
       </StyledColumn>
       <StyledColumn noMobileBorder>
         <Text color="textSubtle">{t('Market cap')}</Text>
-        {mcap?.gt(0) && mcapString ? (
+        {/* {mcap?.gt(0) && mcapString ? (
           <Heading scale="lg">{t('$%marketCap%', { marketCap: mcapString })}</Heading>
         ) : (
           <Skeleton height={24} width={126} my="4px" />
-        )}
+        )} */}
       </StyledColumn>
       <StyledColumn>
         <Text color="textSubtle">{t('Current emissions')}</Text>

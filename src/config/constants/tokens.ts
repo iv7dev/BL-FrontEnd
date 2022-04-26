@@ -2085,7 +2085,7 @@ export const testnetTokens = defineTokens({
     '0xa35062141Fa33BCA92Ce69FeD37D0E8908868AAe',
     18,
     'CAKE',
-    'Genesys Network Token',
+    'Cake Token',
     'https://genesys.network/',
   ),
   busd: new Token(

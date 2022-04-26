@@ -35,7 +35,7 @@ const pools: SerializedPoolConfig[] = [
     stakingToken: serializedTokens.gsys,
     earningToken: serializedTokens.gsys,
     contractAddress: {
-      97: '',
+      97: '0x453d225a002b904E827A79a4e89ab4D8B3D9F4f4',
       56: '0x4bF58629382904dAc0531Fb57dffB35D128A97b9',
     },
     poolCategory: PoolCategory.CORE,

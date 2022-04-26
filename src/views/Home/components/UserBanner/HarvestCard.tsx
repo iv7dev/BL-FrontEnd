@@ -26,14 +26,14 @@ const HarvestCard = () => {
   const { farmsWithStakedBalance, earningsSum: farmEarningsSum } = useFarmsWithBalance()
 
   const masterChefContract = useMasterchef()
-  const cakePriceBusd = usePriceCakeBusd()
-  const earningsBusd = new BigNumber(farmEarningsSum).multipliedBy(cakePriceBusd)
+  // const cakePriceBusd = usePriceCakeBusd()
+  // const earningsBusd = new BigNumber(farmEarningsSum).multipliedBy(cakePriceBusd)
   const numTotalToCollect = farmsWithStakedBalance.length
   const numFarmsToCollect = farmsWithStakedBalance.filter((value) => value.pid !== 0).length
   const hasCakePoolToCollect = numTotalToCollect - numFarmsToCollect > 0
 
-  const earningsText = getEarningsText(numFarmsToCollect, hasCakePoolToCollect, earningsBusd, t)
-  const [preText, toCollectText] = earningsText.split(earningsBusd.toString())
+  // const earningsText = getEarningsText(numFarmsToCollect, hasCakePoolToCollect, earningsBusd, t)
+  // const [preText, toCollectText] = earningsText.split(earningsBusd.toString())
 
   const harvestAllFarms = useCallback(async () => {
     for (let i = 0; i < farmsWithStakedBalance.length; i++) {
@@ -58,7 +58,7 @@ const HarvestCard = () => {
       <CardBody>
         <Flex flexDirection={['column', null, null, 'row']} justifyContent="space-between" alignItems="center">
           <Flex flexDirection="column" alignItems={['center', null, null, 'flex-start']}>
-            {preText && (
+            {/* {preText && (
               <Text mb="4px" color="textSubtle">
                 {preText}
               </Text>
@@ -77,7 +77,7 @@ const HarvestCard = () => {
             )}
             <Text mb={['16px', null, null, '0']} color="textSubtle">
               {toCollectText}
-            </Text>
+            </Text> */}
           </Flex>
           {numTotalToCollect <= 0 ? (
             <NextLinkFromReactRouter to="farms">
