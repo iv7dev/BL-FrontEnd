@@ -33,9 +33,9 @@ export const lightColors: Colors = {
   input: "#EEEAF4",
   inputSecondary: "#BBB7E5",
   tertiary: "#E6E2ED",
-  text: "#000", // page text
-  textDisabled: "#BDC2C4",
-  textSubtle: "#9379BC", // menu text
+  text: "#1f1e1ee3", // page text
+  textDisabled: "#1f1e1ee3",
+  textSubtle: "#1f1e1ee3", // menu text
   disabled: "#E9EAEB",
   gradients: {
     bubblegum: "linear-gradient(139.73deg, #EFE2F7 0%, #EAE9F2 100%)",
@@ -58,13 +58,13 @@ export const darkColors: Colors = {
   backgroundAlt2: "rgba(39, 38, 44, 0.7)",
   cardBorder: "#15153D",
   contrast: "#262035",
-  dropdown: "#F9F9F9",
+  dropdown: "#3D233F",
   dropdownDeep: "#1A191C",
   invertedContrast: "#100C18",
   input: "#1E0D21",
   inputSecondary: "#3D233F",
   primaryDark: "#1E182D",
-  tertiary: "#fff",
+  tertiary: "#9a8c9b",
   text: "#F6F0FF",
   textDisabled: "#F6F0FF",
   textSubtle: "#F6F0FF",

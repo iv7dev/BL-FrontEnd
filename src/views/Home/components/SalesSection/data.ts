@@ -2,8 +2,10 @@ import { TranslateFunction } from 'contexts/Localization/types'
 import { SalesSectionProps } from '.'
 
 export const swapSectionData = (t: TranslateFunction): SalesSectionProps => ({
-  headingText: t('Trade anything. No registration, no hassle.'),
-  bodyText: t('Trade any token on BNB Smart Chain in seconds, just by connecting your wallet.'),
+  headingText: t(' Blue Lotus DAO'),
+  bodyText: t(
+    ' Is the best place to trade and earn on networks such as Ethereum, Polygon, Binance Smart Chain (BSC), and Fantom; you can get the best rates for your token swaps and earn more with your token assets.',
+  ),
   reverse: false,
   primaryButton: {
     to: '/swap',
@@ -50,18 +52,18 @@ export const earnSectionData = (t: TranslateFunction): SalesSectionProps => ({
 })
 
 export const cakeSectionData = (t: TranslateFunction): SalesSectionProps => ({
-  headingText: t('GSYS makes our world go round.'),
+  headingText: t(' GSYS makes our world go round.'),
   bodyText: t(
-    'GSYS token is at the heart of the Genesys Network ecosystem. Buy it, win it, farm it, spend it, stake it... heck, you can even vote with it!',
+    'GSYS is the Utility token that fuels the pump and thrust the Genesys Network Ecosystem. Earn GENESYS from Farms and Pools, or buy it on the exchange.',
   ),
   reverse: false,
   primaryButton: {
-    to: '/swap?outputCurrency=0x7255fbecd4C672E5aE2803532014d86b5DFA0609',
+    to: '/swap?outputCurrency=0xc8bf24E6a3A3c1007C96831bf89A81Bfe824CC65', // token tgsys testnet
     text: t('Buy GSYS'),
     external: false,
   },
   secondaryButton: {
-    to: 'https://genesys-network-1.gitbook.io/genesys-blockchain/tokenomics/genesys',
+    to: 'https://genesys-blockchain.gitbook.io/genesys-blockchain/',
     text: t('Learn'),
     external: true,
   },
@@ -70,7 +72,7 @@ export const cakeSectionData = (t: TranslateFunction): SalesSectionProps => ({
     path: '/images/home/flying-pancakes/',
     attributes: [
       { src: '2-bottom', alt: 'Genesys flying on the bottom' },
-      { src: '2-top', alt: 'Genesys flying on the top' },
+      // { src: '2-top', alt: 'Genesys flying on the top' },
       { src: '2-right', alt: 'Genesys flying on the right' },
     ],
   },

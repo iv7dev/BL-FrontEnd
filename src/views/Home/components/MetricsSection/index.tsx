@@ -38,7 +38,7 @@ const Stats = () => {
     <Flex justifyContent="center" alignItems="center" flexDirection="column">
       <GradientLogo height="48px" width="48px" mb="24px" />
       <Heading textAlign="center" scale="xl">
-        {t('The Number ONE DAO in the Multichain.')}
+        {t('The first ecosystem where you will have all the Blockchain services unified on the same platform.')}
       </Heading>
       <Heading textAlign="center" scale="xl" mb="32px">
         {t('Multichain. Easy and Fast.')}

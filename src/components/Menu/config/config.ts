@@ -62,7 +62,7 @@ const config: (t: ContextApi['t'], languageCode?: string) => ConfigMenuItemsType
   // },
   {
     label: t('Info'),
-    href: '/farms',
+    href: '#',
     icon: EarnIcon,
     fillIcon: EarnFillIcon,
     items: [

@@ -109,10 +109,12 @@ const Hero = () => {
       >
         <Flex flex="1" flexDirection="column">
           <Heading scale="xxl" color="secondary" mb="24px">
-            {t('We are and We Build the Future')}
+            {t('We are and WE Build the FUTURE')}
           </Heading>
           <Heading scale="md" mb="24px">
-            {t('The Best Place to trade and earn on the networks with the lowest rates in the Crypto Universe.')}
+            {t(
+              'We combine the DeFi Blockchain technology ecosystem and community solutions to create the fastest, most scalable, and low gas DEX for Token transactions and NFT market.',
+            )}
           </Heading>
           <Flex>
             {!account && <ConnectWalletButton mr="8px" />}

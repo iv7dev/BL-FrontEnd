@@ -27,7 +27,7 @@ const PriceLink = styled.a`
 const CakePrice: React.FC<Props> = ({ cakePriceUsd, color = "textSubtle", showSkeleton = true }) => {
   return cakePriceUsd ? (
     <PriceLink
-      href="https://genesys.network/swap?outputCurrency=0x7255fbecd4C672E5aE2803532014d86b5DFA0609"
+      href="/swap?outputCurrency=0xc8bf24E6a3A3c1007C96831bf89A81Bfe824CC65" // token tgsys testnet
       target="_blank"
     >
       <LogoRound width="24px" mr="8px" />

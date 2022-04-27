@@ -58,7 +58,7 @@ const stepsConfigBuilder = ({ t, userInfos, eventInfos, userStatus, account, the
         <>
           <Button
             as="a"
-            href="https://genesys.network/swap?outputCurrency=0x7255fbecd4C672E5aE2803532014d86b5DFA0609"
+            href="/swap?outputCurrency=0xc8bf24E6a3A3c1007C96831bf89A81Bfe824CC65"
             target="_blank"
             width="100%"
           >
