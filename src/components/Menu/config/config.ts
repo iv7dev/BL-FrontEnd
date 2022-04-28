@@ -5,11 +5,11 @@ import {
   SwapFillIcon,
   EarnFillIcon,
   EarnIcon,
-  // TrophyIcon,
-  // TrophyFillIcon,
-  // NftIcon,
-  // NftFillIcon,
-  // MoreIcon,
+  TrophyIcon,
+  TrophyFillIcon,
+  NftIcon,
+  NftFillIcon,
+  MoreIcon,
 } from '@pancakeswap/uikit'
 import { ContextApi } from 'contexts/Localization/types'
 // import { nftsBaseUrl } from 'views/Nft/market/constants'
@@ -44,120 +44,120 @@ const config: (t: ContextApi['t'], languageCode?: string) => ConfigMenuItemsType
       // },
     ],
   },
-  // {
-  //   label: t('Earn'),
-  //   href: '/farms',
-  //   icon: EarnIcon,
-  //   fillIcon: EarnFillIcon,
-  //   items: [
-  //     {
-  //       label: t('Farms'),
-  //       href: '/farms',
-  //     },
-  //     {
-  //       label: t('Pools'),
-  //       href: '/pools',
-  //     },
-  //   ],
-  // },
   {
-    label: t('Info'),
+    label: t('Earn'),
     href: '#',
     icon: EarnIcon,
     fillIcon: EarnFillIcon,
     items: [
-      // {
-      //   label: t('Blog'),
-      //   href: 'https://medium.com/genesys-protocol',
-      //   type: DropdownMenuItemType.EXTERNAL_LINK,
-      // },
       {
-        label: t('Docs'),
-        href: 'https://docs.genesys.network',
-        type: DropdownMenuItemType.EXTERNAL_LINK,
+        label: t('Farms'),
+        href: '#',
+      },
+      {
+        label: t('Pools'),
+        href: '#',
       },
     ],
   },
   // {
-  //   label: t('Win'),
-  //   href: '/prediction',
-  //   icon: TrophyIcon,
-  //   fillIcon: TrophyFillIcon,
+  //   label: t('Info'),
+  //   href: '#',
+  //   icon: EarnIcon,
+  //   fillIcon: EarnFillIcon,
   //   items: [
-  //     {
-  //       label: t('Trading Competition'),
-  //       href: '/competition',
-  //     },
-  //     {
-  //       label: t('Prediction (BETA)'),
-  //       href: '/prediction',
-  //     },
-  //     {
-  //       label: t('Lottery'),
-  //       href: '/lottery',
-  //     },
-  //   ],
-  // },
-  // {
-  //   label: t('NFT'),
-  //   href: `${nftsBaseUrl}`,
-  //   icon: NftIcon,
-  //   fillIcon: NftFillIcon,
-  //   items: [
-  //     {
-  //       label: t('Overview'),
-  //       href: `${nftsBaseUrl}`,
-  //     },
-  //     {
-  //       label: t('Collections'),
-  //       href: `${nftsBaseUrl}/collections`,
-  //     },
-  //     {
-  //       label: t('Activity'),
-  //       href: `${nftsBaseUrl}/activity`,
-  //     },
-  //   ],
-  // },
-  // {
-  //   label: '',
-  //   href: '/info',
-  //   icon: MoreIcon,
-  //   hideSubNav: true,
-  //   items: [
-  //     // {
-  //     //   label: t('Info'),
-  //     //   href: '/info',
-  //     // },
-  //     // {
-  //     //   label: t('IFO'),
-  //     //   href: '/ifo',
-  //     // },
-  //     // {
-  //     //   label: t('Voting'),
-  //     //   href: '/voting',
-  //     // },
-  //     // {
-  //     //   type: DropdownMenuItemType.DIVIDER,
-  //     // },
-  //     // {
-  //     //   label: t('Leaderboard'),
-  //     //   href: '/teams',
-  //     // },
-  //     {
-  //       type: DropdownMenuItemType.DIVIDER,
-  //     },
   //     {
   //       label: t('Blog'),
-  //       href: 'https://medium.com/pancakeswap',
+  //       href: '#',
   //       type: DropdownMenuItemType.EXTERNAL_LINK,
   //     },
   //     {
   //       label: t('Docs'),
-  //       href: 'https://docs.genesys.network',
+  //       href: 'https://genesys-blockchain.gitbook.io/genesys-blockchain/',
   //       type: DropdownMenuItemType.EXTERNAL_LINK,
   //     },
   //   ],
   // },
+  {
+    label: t('Win'),
+    href: '/prediction',
+    icon: TrophyIcon,
+    fillIcon: TrophyFillIcon,
+    items: [
+      {
+        label: t('Trading Competition'),
+        href: '/competition',
+      },
+      {
+        label: t('Prediction (BETA)'),
+        href: '/prediction',
+      },
+      // {
+      //   label: t('Lottery'),
+      //   href: '/lottery',
+      // },
+    ],
+  },
+  {
+    label: t('Genesys of Blue Marketplace'),
+    href: `#`,
+    icon: NftIcon,
+    fillIcon: NftFillIcon,
+    items: [
+      {
+        label: t('Marketplace'),
+        href: `#`,
+      },
+      {
+        label: t('Genesys of Blue NFT Collection'),
+        href: `#`,
+      },
+      {
+        label: t('Collab'),
+        href: `#`,
+      },
+    ],
+  },
+  {
+    label: '',
+    href: '#',
+    icon: MoreIcon,
+    hideSubNav: true,
+    items: [
+      {
+        label: t('Info'),
+        href: '#',
+      },
+      {
+        label: t('IFO'),
+        href: '#',
+      },
+      {
+        label: t('Voting'),
+        href: '#',
+      },
+      {
+        type: DropdownMenuItemType.DIVIDER,
+      },
+      {
+        label: t('Leaderboard'),
+        href: '#',
+      },
+      {
+        type: DropdownMenuItemType.DIVIDER,
+      },
+      {
+        label: t('Blog'),
+        href: '#',
+        type: DropdownMenuItemType.EXTERNAL_LINK,
+      },
+      {
+        label: t('Docs'),
+        href: 'https://genesys-blockchain.gitbook.io/genesys-blockchain/',
+        type: DropdownMenuItemType.EXTERNAL_LINK,
+      },
+    ],
+  },
 ]
 
 export default config
