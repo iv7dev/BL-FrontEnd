@@ -66,11 +66,11 @@ const config: (t: ContextApi['t'], languageCode?: string) => ConfigMenuItemsType
     icon: EarnIcon,
     fillIcon: EarnFillIcon,
     items: [
-      {
-        label: t('Blog'),
-        href: 'https://medium.com/genesys-protocol',
-        type: DropdownMenuItemType.EXTERNAL_LINK,
-      },
+      // {
+      //   label: t('Blog'),
+      //   href: 'https://medium.com/genesys-protocol',
+      //   type: DropdownMenuItemType.EXTERNAL_LINK,
+      // },
       {
         label: t('Docs'),
         href: 'https://docs.genesys.network',
