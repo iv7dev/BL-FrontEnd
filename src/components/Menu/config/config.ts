@@ -80,17 +80,17 @@ const config: (t: ContextApi['t'], languageCode?: string) => ConfigMenuItemsType
   // },
   {
     label: t('Win'),
-    href: '/prediction',
+    href: '#',
     icon: TrophyIcon,
     fillIcon: TrophyFillIcon,
     items: [
       {
         label: t('Trading Competition'),
-        href: '/competition',
+        href: '#',
       },
       {
         label: t('Prediction (BETA)'),
-        href: '/prediction',
+        href: '#',
       },
       // {
       //   label: t('Lottery'),
