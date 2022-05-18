@@ -7,7 +7,7 @@ import { useFastRefreshEffect, useSlowRefreshEffect } from 'hooks/useRefreshEffe
 import { useMemo } from 'react'
 import { useSelector } from 'react-redux'
 import { useAppDispatch } from 'state'
-import { fetchFarmsPublicDataAsync, fetchFarmUserDataAsync, nonArchivedFarms } from '.'
+import { fetchFarmsPublicDataAsync, fetchFarmUserDataAsync } from '.'
 import { DeserializedFarm, DeserializedFarmsState, DeserializedFarmUserData, State } from '../types'
 import {
   farmSelector,
@@ -19,28 +19,27 @@ import {
   makeFarmFromPidSelector,
 } from './selectors'
 
-export const usePollFarmsWithUserData = (includeArchive = false) => {
+export const usePollFarmsWithUserData = () => {
   const dispatch = useAppDispatch()
   const { account } = useWeb3React()
 
   useSlowRefreshEffect(() => {
-    const farmsToFetch = includeArchive ? farmsConfig : nonArchivedFarms
-    const pids = farmsToFetch.map((farmToFetch) => farmToFetch.pid)
+    const pids = farmsConfig.map((farmToFetch) => farmToFetch.pid)
 
     dispatch(fetchFarmsPublicDataAsync(pids))
 
     if (account) {
       dispatch(fetchFarmUserDataAsync({ account, pids }))
     }
-  }, [includeArchive, dispatch, account])
+  }, [dispatch, account])
 }
 
 /**
  * Fetches the "core" farm data used globally
- * 251 = GSYS-BNB LP
- * 252 = BUSD-BNB LP
+ * 2 = CAKE-BNB LP
+ * 3 = BUSD-BNB LP
  */
-const coreFarmPIDs = CHAIN_ID === String(ChainId.MAINNET) ? [251, 252] : [1, 2]
+const coreFarmPIDs = CHAIN_ID === String(ChainId.MAINNET) ? [2, 3] : [1, 2]
 export const usePollCoreFarmData = () => {
   const dispatch = useAppDispatch()
 

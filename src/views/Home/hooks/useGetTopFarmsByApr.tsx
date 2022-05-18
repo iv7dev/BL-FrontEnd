@@ -2,7 +2,8 @@ import { useState, useEffect } from 'react'
 import { ChainId } from '@genesysnetwork/sdk'
 import { useFarms, usePriceCakeBusd } from 'state/farms/hooks'
 import { useAppDispatch } from 'state'
-import { fetchFarmsPublicDataAsync, nonArchivedFarms } from 'state/farms'
+import farmsConfig from 'config/constants/farms'
+import { fetchFarmsPublicDataAsync } from 'state/farms'
 import { getFarmApr } from 'utils/apr'
 import orderBy from 'lodash/orderBy'
 import { DeserializedFarm } from 'state/types'
@@ -11,7 +12,7 @@ import { FarmWithStakedValue } from '../../Farms/components/types'
 
 const useGetTopFarmsByApr = (isIntersecting: boolean) => {
   const dispatch = useAppDispatch()
-  const { data: farms } = useFarms()
+  const { data: farms, regularCakePerBlock } = useFarms()
   const [fetchStatus, setFetchStatus] = useState(FetchStatus.Idle)
   const [topFarms, setTopFarms] = useState<FarmWithStakedValue[]>([null, null, null, null, null])
   const cakePriceBusd = usePriceCakeBusd()
@@ -19,7 +20,7 @@ const useGetTopFarmsByApr = (isIntersecting: boolean) => {
   useEffect(() => {
     const fetchFarmData = async () => {
       setFetchStatus(FetchStatus.Fetching)
-      const activeFarms = nonArchivedFarms.filter((farm) => farm.pid !== 0)
+      const activeFarms = farmsConfig.filter((farm) => farm.pid !== 0)
       try {
         await dispatch(fetchFarmsPublicDataAsync(activeFarms.map((farm) => farm.pid)))
         setFetchStatus(FetchStatus.Fetched)
@@ -51,6 +52,7 @@ const useGetTopFarmsByApr = (isIntersecting: boolean) => {
           cakePriceBusd,
           totalLiquidity,
           farm.lpAddresses[ChainId.MAINNET],
+          regularCakePerBlock,
         )
         return { ...farm, apr: cakeRewardsApr, lpRewardsApr }
       })
@@ -62,7 +64,7 @@ const useGetTopFarmsByApr = (isIntersecting: boolean) => {
     if (fetchStatus === FetchStatus.Fetched && !topFarms[0]) {
       getTopFarmsByApr(farms)
     }
-  }, [setTopFarms, farms, fetchStatus, cakePriceBusd, topFarms])
+  }, [setTopFarms, farms, fetchStatus, cakePriceBusd, topFarms, regularCakePerBlock])
 
   return { topFarms }
 }

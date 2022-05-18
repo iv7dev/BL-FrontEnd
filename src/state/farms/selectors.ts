@@ -38,7 +38,7 @@ const deserializeFarm = (farm: SerializedFarm): DeserializedFarm => {
   }
 }
 
-const selectCakeFarm = (state: State) => state.farms.data.find((f) => f.pid === 251) // 251 = GSYS-BNB LP
+const selectCakeFarm = (state: State) => state.farms.data.find((f) => f.pid === 2)
 const selectFarmByKey = (key: string, value: string | number) => (state: State) =>
   state.farms.data.find((f) => f[key] === value)
 
@@ -95,12 +95,13 @@ export const farmSelector = createSelector(
   (state: State) => state.farms,
   (farms) => {
     const deserializedFarmsData = farms.data.map(deserializeFarm)
-    const { loadArchivedFarmsData, userDataLoaded, poolLength } = farms
+    const { loadArchivedFarmsData, userDataLoaded, poolLength, regularCakePerBlock } = farms
     return {
       loadArchivedFarmsData,
       userDataLoaded,
       data: deserializedFarmsData,
       poolLength,
+      regularCakePerBlock,
     }
   },
 )

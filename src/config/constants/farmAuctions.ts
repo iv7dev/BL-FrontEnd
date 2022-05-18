@@ -7,6 +7,24 @@ import { FarmAuctionBidderConfig } from './types'
 export const whitelistedBidders: FarmAuctionBidderConfig[] =
   Number(CHAIN_ID) === ChainId.MAINNET
     ? [
+        // Those farms changed their project wallet address.
+        {
+          account: '0xA6D19C2A2EA13e9eF02d795155F6c335af764955', // Auction #19
+          farmName: 'HAPPY-BNB',
+          tokenAddress: '0xF5d8A096CcCb31b9D7bcE5afE812BE23e3D4690d',
+          quoteToken: tokens.wbnb,
+          tokenName: 'HappyFans',
+          projectSite: 'https://happyfans.club/',
+        },
+        {
+          account: '0xB8614FABf4bbA416b9dB620e12272AD63b14387E', // Auction #20
+          farmName: '8PAY-BUSD',
+          tokenAddress: '0xfeea0bdd3d07eb6fe305938878c0cadbfa169042',
+          quoteToken: tokens.busd,
+          tokenName: '8PAY',
+          projectSite: 'https://8pay.network/',
+        },
+        // Below farms was the latest.
         {
           account: '0x9Ed5a62535A5Dd2dB2d9bB21bAc42035Af47F630',
           farmName: 'NAV-BNB',
@@ -520,7 +538,7 @@ export const whitelistedBidders: FarmAuctionBidderConfig[] =
           projectSite: 'https://app.singularitydao.ai/',
         },
         {
-          account: '0xB8614FABf4bbA416b9dB620e12272AD63b14387E',
+          account: '0x304dDD664C961141B9C11F0ab597244306e021F4',
           farmName: '8PAY-BUSD',
           tokenAddress: '0xfeea0bdd3d07eb6fe305938878c0cadbfa169042',
           quoteToken: tokens.busd,
@@ -670,6 +688,54 @@ export const whitelistedBidders: FarmAuctionBidderConfig[] =
           quoteToken: tokens.busd,
           tokenName: 'DeFiato',
           projectSite: 'https://defiato.com/',
+        },
+        {
+          account: '0x4eeD6e51544Ef967A24A86F318A6779ed85cF0e6',
+          farmName: 'HAPPY-BNB',
+          tokenAddress: '0xF5d8A096CcCb31b9D7bcE5afE812BE23e3D4690d',
+          quoteToken: tokens.wbnb,
+          tokenName: 'HappyFans',
+          projectSite: 'https://happyfans.club/',
+        },
+        {
+          account: '0x0888406F1091D18e941F3Fe74ee0286963FFAc48',
+          farmName: 'WZRD-BUSD',
+          tokenAddress: '0xFa40d8FC324bcdD6Bbae0e086De886c571C225d4',
+          quoteToken: tokens.busd,
+          tokenName: 'Wizardia',
+          projectSite: 'https://wizardia.io/',
+        },
+        {
+          account: '0x83e0dE1c6dD34e07D5b1BAF36b367e22C8b6fDdF',
+          farmName: 'XCN-BNB',
+          tokenAddress: '0x7324c7C0d95CEBC73eEa7E85CbAac0dBdf88a05b',
+          quoteToken: tokens.wbnb,
+          tokenName: 'Chain',
+          projectSite: 'https://chain.com/',
+        },
+        {
+          account: '0x4D85770FD4d42060d3A8075eF781830954b5C93F',
+          farmName: 'eLunr-BUSD',
+          tokenAddress: '0x37807D4fbEB84124347B8899Dd99616090D3e304',
+          quoteToken: tokens.busd,
+          tokenName: 'LunarCrush',
+          projectSite: 'https://lunarcrush.com/',
+        },
+        {
+          account: '0x4acD36243d2cdE7865CA13E827ede5fBFF1ADe3d',
+          farmName: 'ETM-BUSD',
+          tokenAddress: '0x75bDEd6BF44bb01527138673dCc064DBe3E7d96d',
+          quoteToken: tokens.busd,
+          tokenName: 'Etermon',
+          projectSite: 'https://etermon.io/',
+        },
+        {
+          account: '0x3b8eA037356CfD867c2191FD11614FA97BAB2772',
+          farmName: 'NBT-USDT',
+          tokenAddress: '0x1D3437E570e93581Bd94b2fd8Fbf202d4a65654A',
+          quoteToken: tokens.usdt,
+          tokenName: 'NanoByte',
+          projectSite: 'https://www.nanobyte.finance/',
         },
       ].map((bidderConfig) => ({
         ...bidderConfig,

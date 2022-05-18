@@ -10,17 +10,17 @@ import tokens from 'config/constants/tokens'
 import {
   getAddress,
   getPancakeProfileAddress,
-  getPancakeRabbitsAddress,
+  getPancakeBunniesAddress,
   getBunnyFactoryAddress,
   getBunnySpecialAddress,
   getLotteryV2Address,
   getMasterChefAddress,
+  getMasterChefV1Address,
   getPointCenterIfoAddress,
   getClaimRefundAddress,
   getTradingCompetitionAddress,
   getEasterNftAddress,
   getCakeVaultAddress,
-  getIfoPoolAddress,
   getPredictionsAddress,
   getChainlinkOracleAddress,
   getMulticallAddress,
@@ -34,12 +34,14 @@ import {
   getPancakeSquadAddress,
   getTradingCompetitionAddressV2,
   getTradingCompetitionAddressMobox,
+  getTradingCompetitionAddressMoD,
   getBunnySpecialXmasAddress,
+  getGalaxyNFTClaimingAddress,
 } from 'utils/addressHelpers'
 
 // ABI
 import profileABI from 'config/abi/pancakeProfile.json'
-import pancakeRabbitsAbi from 'config/abi/pancakeRabbits.json'
+import pancakeBunniesAbi from 'config/abi/pancakeBunnies.json'
 import bunnyFactoryAbi from 'config/abi/bunnyFactory.json'
 import bunnySpecialAbi from 'config/abi/bunnySpecial.json'
 import bep20Abi from 'config/abi/erc20.json'
@@ -51,6 +53,7 @@ import ifoV2Abi from 'config/abi/ifoV2.json'
 import pointCenterIfo from 'config/abi/pointCenterIfo.json'
 import lotteryV2Abi from 'config/abi/lotteryV2.json'
 import masterChef from 'config/abi/masterchef.json'
+import masterChefV1 from 'config/abi/masterchefV1.json'
 import sousChef from 'config/abi/sousChef.json'
 import sousChefV2 from 'config/abi/sousChefV2.json'
 import sousChefBnb from 'config/abi/sousChefBnb.json'
@@ -58,9 +61,9 @@ import claimRefundAbi from 'config/abi/claimRefund.json'
 import tradingCompetitionAbi from 'config/abi/tradingCompetition.json'
 import tradingCompetitionV2Abi from 'config/abi/tradingCompetitionV2.json'
 import tradingCompetitionMoboxAbi from 'config/abi/tradingCompetitionMobox.json'
+import tradingCompetitionMoDAbi from 'config/abi/tradingCompetitionMoD.json'
 import easterNftAbi from 'config/abi/easterNft.json'
-import cakeVaultAbi from 'config/abi/cakeVault.json'
-import ifoPoolAbi from 'config/abi/ifoPool.json'
+import cakeVaultV2Abi from 'config/abi/cakeVaultV2.json'
 import predictionsAbi from 'config/abi/predictions.json'
 import chainlinkOracleAbi from 'config/abi/chainlinkOracle.json'
 import MultiCallAbi from 'config/abi/Multicall.json'
@@ -70,6 +73,7 @@ import bunnySpecialLotteryAbi from 'config/abi/bunnySpecialLottery.json'
 import bunnySpecialXmasAbi from 'config/abi/bunnySpecialXmas.json'
 import farmAuctionAbi from 'config/abi/farmAuction.json'
 import anniversaryAchievementAbi from 'config/abi/anniversaryAchievement.json'
+import galaxyNFTClaimingAbi from 'config/abi/galaxyNFTClaiming.json'
 import nftMarketAbi from 'config/abi/nftMarket.json'
 import nftSaleAbi from 'config/abi/nftSale.json'
 import pancakeSquadAbi from 'config/abi/pancakeSquad.json'
@@ -83,15 +87,15 @@ import type {
   AnniversaryAchievement,
   IfoV1,
   IfoV2,
-  IfoPool,
   Erc20,
   Erc721,
   Cake,
   BunnyFactory,
-  PancakeRabbits,
+  PancakeBunnies,
   PancakeProfile,
   LotteryV2,
   Masterchef,
+  MasterchefV1,
   SousChef,
   SousChefV2,
   BunnySpecial,
@@ -100,20 +104,22 @@ import type {
   TradingCompetition,
   TradingCompetitionV2,
   EasterNft,
-  CakeVault,
   Multicall,
   BunnySpecialCakeVault,
   BunnySpecialPrediction,
   BunnySpecialLottery,
+  GalaxyNFTClaiming,
   NftMarket,
   NftSale,
   PancakeSquad,
   Erc721collection,
   PointCenterIfo,
+  CakeVaultV2,
   TradingCompetitionMobox,
+  TradingCompetitionMoD,
 } from 'config/abi/types'
 
-const getContract = (abi: any, address: string, signer?: Signer | Provider) => {
+export const getContract = (abi: any, address: string, signer?: Signer | Provider) => {
   const signerOrProvider = signer ?? simpleRpcProvider
   return new Contract(address, abi, signerOrProvider)
 }
@@ -152,8 +158,8 @@ export const getCakeContract = (signer?: Signer | Provider) => {
 export const getProfileContract = (signer?: Signer | Provider) => {
   return getContract(profileABI, getPancakeProfileAddress(), signer) as PancakeProfile
 }
-export const getPancakeRabbitContract = (signer?: Signer | Provider) => {
-  return getContract(pancakeRabbitsAbi, getPancakeRabbitsAddress(), signer) as PancakeRabbits
+export const getPancakeBunniesContract = (signer?: Signer | Provider) => {
+  return getContract(pancakeBunniesAbi, getPancakeBunniesAddress(), signer) as PancakeBunnies
 }
 export const getBunnyFactoryContract = (signer?: Signer | Provider) => {
   return getContract(bunnyFactoryAbi, getBunnyFactoryAddress(), signer) as BunnyFactory
@@ -166,6 +172,9 @@ export const getLotteryV2Contract = (signer?: Signer | Provider) => {
 }
 export const getMasterchefContract = (signer?: Signer | Provider) => {
   return getContract(masterChef, getMasterChefAddress(), signer) as Masterchef
+}
+export const getMasterchefV1Contract = (signer?: Signer | Provider) => {
+  return getContract(masterChefV1, getMasterChefV1Address(), signer) as MasterchefV1
 }
 export const getClaimRefundContract = (signer?: Signer | Provider) => {
   return getContract(claimRefundAbi, getClaimRefundAddress(), signer) as ClaimRefund
@@ -181,14 +190,15 @@ export const getTradingCompetitionContractMobox = (signer?: Signer | Provider) =
   return getContract(tradingCompetitionMoboxAbi, getTradingCompetitionAddressMobox(), signer) as TradingCompetitionMobox
 }
 
+export const getTradingCompetitionContractMoD = (signer?: Signer | Provider) => {
+  return getContract(tradingCompetitionMoDAbi, getTradingCompetitionAddressMoD(), signer) as TradingCompetitionMoD
+}
+
 export const getEasterNftContract = (signer?: Signer | Provider) => {
   return getContract(easterNftAbi, getEasterNftAddress(), signer) as EasterNft
 }
-export const getCakeVaultContract = (signer?: Signer | Provider) => {
-  return getContract(cakeVaultAbi, getCakeVaultAddress(), signer) as CakeVault
-}
-export const getIfoPoolContract = (signer?: Signer | Provider) => {
-  return getContract(ifoPoolAbi, getIfoPoolAddress(), signer) as IfoPool
+export const getCakeVaultV2Contract = (signer?: Signer | Provider) => {
+  return getContract(cakeVaultV2Abi, getCakeVaultAddress(), signer) as CakeVaultV2
 }
 
 export const getPredictionsContract = (signer?: Signer | Provider) => {
@@ -219,6 +229,10 @@ export const getFarmAuctionContract = (signer?: Signer | Provider) => {
 export const getAnniversaryAchievementContract = (signer?: Signer | Provider) => {
   return getContract(anniversaryAchievementAbi, getAnniversaryAchievement(), signer) as AnniversaryAchievement
 }
+export const getGalaxyNTFClaimingContract = (signer?: Signer | Provider) => {
+  return getContract(galaxyNFTClaimingAbi, getGalaxyNFTClaimingAddress(), signer) as GalaxyNFTClaiming
+}
+
 export const getNftMarketContract = (signer?: Signer | Provider) => {
   return getContract(nftMarketAbi, getNftMarketAddress(), signer) as NftMarket
 }

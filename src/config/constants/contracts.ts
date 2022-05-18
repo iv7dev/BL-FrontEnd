@@ -1,11 +1,11 @@
 export default {
   masterChef: {
-    97: '0x453d225a002b904E827A79a4e89ab4D8B3D9F4f4',
-    56: '0x4bF58629382904dAc0531Fb57dffB35D128A97b9',
-  },
-  cakeVault: {
-    56: '0xa80240Eb5d7E05d3F250cF000eEc0891d00b51CC',
     97: '',
+    56: '0xa5f8C5Dbd5F286960b9d90548680aE5ebFf07652',
+  },
+  masterChefV1: {
+    97: '0x1d32c2945C8FDCBc7156c553B7cEa4325a17f4f9',
+    56: '0x73feaa1eE314F8c655E354234017bE2193C9E24E',
   },
   multiCall: {
     56: '0xfF6FD90A470Aaa0c1B8A54681746b07AcdFedc9B',
@@ -25,7 +25,7 @@ export default {
     56: '0xDf4dBf6536201370F95e06A0F8a7a70fE40E388a',
     97: '0x4B683C7E13B6d5D7fd1FeA9530F451954c1A7c8A',
   },
-  pancakeRabbits: {
+  pancakeBunnies: {
     56: '0xDf7952B35f24aCF7fC0487D01c8d5690a60DBa07',
     97: '0x60935F36e4631F73f0f407e68642144e07aC7f5E',
   },
@@ -57,12 +57,16 @@ export default {
     56: '0x1C5161CdB145dE35a8961F82b065fd1F75C3BaDf',
     97: '',
   },
+  tradingCompetitionMoD: {
+    56: '0x9F9b4728Cff3eb28aA8dC21482D3b542e4c6d039',
+    97: '',
+  },
   easterNft: {
     56: '0x23c41D28A239dDCAABd1bb1deF8d057189510066',
     97: '0x24ec6962dbe874F6B67B5C50857565667fA0854F',
   },
-  ifoPool: {
-    56: '0x1B2A2f6ed4A1401E8C73B4c2B6172455ce2f78E8',
+  cakeVault: {
+    56: '0x45c54210128a065de780C4B0Df3d16664f7f859e',
     97: '',
   },
   predictions: {
@@ -96,6 +100,10 @@ export default {
   AnniversaryAchievement: {
     56: '0x787980da5491118C3cB33B21aB50c8c379D2C552',
     97: '0x981aE96378e770DE44F89cD9175E708f9EDB70a9',
+  },
+  galaxyNftClaiming: {
+    56: '0x2D18f2d27D50C9b4013DEBA3D54f60996bD8847E',
+    97: '',
   },
   nftMarket: {
     56: '0x17539cCa21C7933Df5c980172d22659B8C345C5A',

@@ -1,11 +1,11 @@
 /* eslint-disable no-var */
 /* eslint-disable vars-on-top */
 import { renderHook } from '@testing-library/react-hooks'
+import { DEFAULT_OUTPUT_CURRENCY } from 'config/constants'
 import { parse } from 'querystring'
 import { useCurrency } from 'hooks/Tokens'
-import { createWrapper } from 'testUtils'
+import { createReduxWrapper } from 'testUtils'
 import { Field } from './actions'
-import { DEFAULT_OUTPUT_CURRENCY } from './constants'
 import { queryParametersToSwapState, useDerivedSwapInfo, useSwapState } from './hooks'
 
 describe('hooks', () => {
@@ -91,19 +91,6 @@ describe('hooks', () => {
         recipient: '0x0fF2D1eFd7A57B7562b2bf27F3f37899dB27F4a5',
       })
     })
-    test('accepts any recipient', () => {
-      expect(queryParametersToSwapState(parse('outputCurrency=BNB&exactAmount=20.5&recipient=bob.argent.xyz'))).toEqual(
-        {
-          [Field.OUTPUT]: { currencyId: 'BNB' },
-          [Field.INPUT]: { currencyId: '' },
-          typedValue: '20.5',
-          independentField: Field.INPUT,
-          pairDataById: {},
-          derivedPairDataById: {},
-          recipient: 'bob.argent.xyz',
-        },
-      )
-    })
   })
 })
 
@@ -131,17 +118,9 @@ describe('#useDerivedSwapInfo', () => {
         } = useSwapState()
         const inputCurrency = useCurrency(inputCurrencyId)
         const outputCurrency = useCurrency(outputCurrencyId)
-        return useDerivedSwapInfo(
-          independentField,
-          typedValue,
-          inputCurrencyId,
-          inputCurrency,
-          outputCurrencyId,
-          outputCurrency,
-          recipient,
-        )
+        return useDerivedSwapInfo(independentField, typedValue, inputCurrency, outputCurrency, recipient)
       },
-      { wrapper: createWrapper() },
+      { wrapper: createReduxWrapper() },
     )
     expect(result.current.inputError).toBe('Connect Wallet')
 
@@ -165,18 +144,10 @@ describe('#useDerivedSwapInfo', () => {
         } = useSwapState()
         const inputCurrency = useCurrency(inputCurrencyId)
         const outputCurrency = useCurrency(outputCurrencyId)
-        return useDerivedSwapInfo(
-          independentField,
-          typedValue,
-          inputCurrencyId,
-          inputCurrency,
-          outputCurrencyId,
-          outputCurrency,
-          recipient,
-        )
+        return useDerivedSwapInfo(independentField, typedValue, inputCurrency, outputCurrency, recipient)
       },
       {
-        wrapper: createWrapper({
+        wrapper: createReduxWrapper({
           swap: {
             typedValue: '0.11',
             [Field.INPUT]: { currencyId: 'BNB' },
@@ -204,21 +175,13 @@ describe('#useDerivedSwapInfo', () => {
         } = useSwapState()
         const inputCurrency = useCurrency(inputCurrencyId)
         const outputCurrency = useCurrency(outputCurrencyId)
-        const swapInfo = useDerivedSwapInfo(
-          independentField,
-          typedValue,
-          inputCurrencyId,
-          inputCurrency,
-          outputCurrencyId,
-          outputCurrency,
-          recipient,
-        )
+        const swapInfo = useDerivedSwapInfo(independentField, typedValue, inputCurrency, outputCurrency, recipient)
         return {
           swapInfo,
         }
       },
       {
-        wrapper: createWrapper(),
+        wrapper: createReduxWrapper(),
       },
     )
 

@@ -15,6 +15,7 @@ import {
 import storage from 'redux-persist/lib/storage'
 import burn from './burn/reducer'
 import farmsReducer from './farms'
+import farmsReducerV1 from './farmsV1'
 import { updateVersion } from './global/actions'
 import infoReducer from './info'
 import lists from './lists/reducer'
@@ -29,7 +30,7 @@ import transactions from './transactions/reducer'
 import user from './user/reducer'
 import limitOrders from './limitOrders/reducer'
 
-const PERSISTED_KEYS: string[] = ['user', 'transactions', 'lists']
+const PERSISTED_KEYS: string[] = ['user', 'transactions']
 
 const migrations = {
   0: (state) => {
@@ -42,6 +43,11 @@ const migrations = {
       },
     }
   },
+  1: (state) => {
+    return {
+      ...state,
+    }
+  },
 }
 
 const persistConfig = {
@@ -49,7 +55,14 @@ const persistConfig = {
   whitelist: PERSISTED_KEYS,
   blacklist: ['profile'],
   storage,
-  version: 0,
+  version: 1,
+  migrate: createMigrate(migrations, { debug: false }),
+}
+
+const ListsConfig = {
+  key: 'lists',
+  storage,
+  version: 1,
   migrate: createMigrate(migrations, { debug: false }),
 }
 
@@ -57,6 +70,7 @@ const persistedReducer = persistReducer(
   persistConfig,
   combineReducers({
     farms: farmsReducer,
+    farmsV1: farmsReducerV1,
     pools: poolsReducer,
     predictions: predictionsReducer,
     lottery: lotteryReducer,
@@ -72,7 +86,7 @@ const persistedReducer = persistReducer(
     mint,
     burn,
     multicall,
-    lists,
+    lists: persistReducer(ListsConfig, lists),
   }),
 )
 

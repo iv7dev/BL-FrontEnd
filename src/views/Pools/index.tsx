@@ -4,7 +4,7 @@ import { BigNumber as EthersBigNumber } from '@ethersproject/bignumber'
 import { formatUnits } from '@ethersproject/units'
 import BigNumber from 'bignumber.js'
 import { useWeb3React } from '@web3-react/core'
-import { Heading, Flex, Image, Text } from '@pancakeswap/uikit'
+import { Heading, Flex, Image, Text, Link } from '@pancakeswap/uikit'
 import orderBy from 'lodash/orderBy'
 import partition from 'lodash/partition'
 import { useTranslation } from 'contexts/Localization'
@@ -19,7 +19,6 @@ import Select, { OptionProps } from 'components/Select/Select'
 import { DeserializedPool, DeserializedPoolVault } from 'state/types'
 import { useUserPoolStakedOnly, useUserPoolsViewMode } from 'state/user/hooks'
 import { ViewMode } from 'state/user/actions'
-import { BIG_ZERO } from 'utils/bigNumber'
 import { useRouter } from 'next/router'
 import Loading from 'components/Loading'
 import { useInitialBlock } from 'state/block/hooks'
@@ -27,8 +26,6 @@ import { BSC_BLOCK_TIME } from 'config'
 import PoolCard from './components/PoolCard'
 import CakeVaultCard from './components/CakeVaultCard'
 import PoolTabButtons from './components/PoolTabButtons'
-import BountyCard from './components/BountyCard'
-import HelpButton from './components/HelpButton'
 import PoolsTable from './components/PoolsTable/PoolsTable'
 import { getCakeVaultEarnings } from './helpers'
 
@@ -78,6 +75,20 @@ const ControlStretch = styled(Flex)`
   }
 `
 
+const FinishedTextContainer = styled(Flex)`
+  padding-bottom: 32px;
+  flex-direction: column;
+  ${({ theme }) => theme.mediaQueries.md} {
+    flex-direction: row;
+  }
+`
+
+const FinishedTextLink = styled(Link)`
+  font-weight: 400;
+  white-space: nowrap;
+  text-decoration: underline;
+`
+
 const NUMBER_OF_POOLS_VISIBLE = 12
 
 const sortPools = (account: string, sortOption: string, pools: DeserializedPool[], poolsToSort: DeserializedPool[]) => {
@@ -104,6 +115,7 @@ const sortPools = (account: string, sortOption: string, pools: DeserializedPool[
               vault.userData.userShares,
               vault.pricePerFullShare,
               vault.earningTokenPrice,
+              vault.userData.currentOverdueFee.plus(vault.userData.currentPerformanceFee),
             ).autoUsdToDisplay
           }
           return pool.userData.pendingReward.times(pool.earningTokenPrice).toNumber()
@@ -111,16 +123,6 @@ const sortPools = (account: string, sortOption: string, pools: DeserializedPool[
         'desc',
       )
     case 'totalStaked': {
-      const cakeInVaults = pools.reduce((total, pool) => {
-        if (pool.vaultKey) {
-          const vault = pool as DeserializedPoolVault
-          if (vault.totalCakeInVault) {
-            return vault.totalCakeInVault.plus(total)
-          }
-          return total
-        }
-        return total
-      }, BIG_ZERO)
       return orderBy(
         poolsToSort,
         (pool: DeserializedPool) => {
@@ -131,14 +133,6 @@ const sortPools = (account: string, sortOption: string, pools: DeserializedPool[
               totalStaked =
                 +formatUnits(EthersBigNumber.from(vault.totalCakeInVault.toString()), pool.stakingToken.decimals) *
                 pool.stakingTokenPrice
-            }
-          } else if (pool.sousId === 0) {
-            if (pool.totalStaked?.isFinite() && pool.stakingTokenPrice && cakeInVaults.isFinite()) {
-              const manualCakeTotalMinusAutoVault = EthersBigNumber.from(pool.totalStaked.toString()).sub(
-                cakeInVaults.toString(),
-              )
-              totalStaked =
-                +formatUnits(manualCakeTotalMinusAutoVault, pool.stakingToken.decimals) * pool.stakingTokenPrice
             }
           } else if (pool.totalStaked?.isFinite() && pool.stakingTokenPrice) {
             totalStaked =
@@ -257,7 +251,7 @@ const Pools: React.FC = () => {
     </CardLayout>
   )
 
-  const tableLayout = <PoolsTable pools={chosenPools} account={account} userDataLoaded={userDataLoaded} />
+  const tableLayout = <PoolsTable pools={chosenPools} account={account} />
 
   return (
     <>
@@ -273,10 +267,6 @@ const Pools: React.FC = () => {
             <Heading scale="md" color="text">
               {t('High APR, low risk.')}
             </Heading>
-          </Flex>
-          <Flex flex="1" height="fit-content" justifyContent="center" alignItems="center" mt={['24px', null, '0']}>
-            <HelpButton />
-            <BountyCard />
           </Flex>
         </Flex>
       </PageHeader>
@@ -331,9 +321,14 @@ const Pools: React.FC = () => {
           </FilterContainer>
         </PoolControls>
         {showFinishedPools && (
-          <Text fontSize="20px" color="failure" pb="32px">
-            {t('These pools are no longer distributing rewards. Please unstake your tokens.')}
-          </Text>
+          <FinishedTextContainer>
+            <Text fontSize={['16px', null, '20px']} color="failure" pr="4px">
+              {t('Looking for v1 CAKE syrup pools?')}
+            </Text>
+            <FinishedTextLink href="/migration" fontSize={['16px', null, '20px']} color="failure">
+              {t('Go to migration page')}.
+            </FinishedTextLink>
+          </FinishedTextContainer>
         )}
         {account && !userDataLoaded && stakedOnly && (
           <Flex justifyContent="center" mb="4px">

@@ -2061,6 +2061,41 @@ export const mainnetTokens = defineTokens({
     'Tiny Coin',
     'https://tinyworlds.io/',
   ),
+  happy: new Token(
+    MAINNET,
+    '0xF5d8A096CcCb31b9D7bcE5afE812BE23e3D4690d',
+    18,
+    'Happy',
+    'HappyFans',
+    'https://happyfans.club/',
+  ),
+  wzrd: new Token(
+    MAINNET,
+    '0xFa40d8FC324bcdD6Bbae0e086De886c571C225d4',
+    18,
+    'WZRD',
+    'Wizardia Token',
+    'https://wizardia.io/',
+  ),
+  ceek: new Token(MAINNET, '0xe0F94Ac5462997D2BC57287Ac3a3aE4C31345D66', 18, 'CEEK', 'CEEK', 'https://www.ceek.com/'),
+  abnbc: new Token(
+    MAINNET,
+    '0xE85aFCcDaFBE7F2B096f268e31ccE3da8dA2990A',
+    18,
+    'aBNBc',
+    'Ankr BNB Reward Bearing Certificate',
+    'https://www.ankr.com/',
+  ),
+  ankr: new Token(MAINNET, '0xf307910A4c7bbc79691fD374889b36d8531B08e3', 18, 'ANKR', 'Ankr', 'https://www.ankr.com/'),
+  gal: new Token(
+    MAINNET,
+    '0xe4Cc45Bb5DBDA06dB6183E8bf016569f40497Aa5',
+    18,
+    'GAL',
+    'Project Galaxy',
+    'https://galaxy.eco/',
+  ),
+  xcn: new Token(MAINNET, '0x7324c7C0d95CEBC73eEa7E85CbAac0dBdf88a05b', 18, 'XCN', 'Chain', 'https://chain.com/'),
 } as const)
 
 export const testnetTokens = defineTokens({
