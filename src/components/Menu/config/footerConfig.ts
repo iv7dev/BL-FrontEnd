@@ -26,6 +26,19 @@ export const footerLinks: (t: ContextApi['t']) => FooterLinkType[] = (t) => [
         label: t('GSYS token'),
         href: 'https://bscscan.com/token/0xc073eb514B96cFbe470b0d23e0a620BaE73ee165',
       },
+
+      //         label: t('Blog'),
+      //         href: 'https://medium.com/pancakeswap',
+      //       },
+      //       {
+      //         label: t('Community'),
+      //         href: 'https://docs.pancakeswap.finance/contact-us/telegram',
+      //       },
+      //       {
+      //         label: t('Litepaper'),
+      //         href: 'https://v2litepaper.pancakeswap.finance/',
+      // >>>>>>> upstream/develop
+      //       },
       {
         label: '—',
       },

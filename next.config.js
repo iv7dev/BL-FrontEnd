@@ -3,6 +3,7 @@ const { withSentryConfig } = require('@sentry/nextjs')
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 })
+const withTM = require('next-transpile-modules')(['@pancakeswap/uikit'])
 
 const sentryWebpackPluginOptions =
   process.env.VERCEL_ENV === 'production'
@@ -55,6 +56,37 @@ const config = {
       },
     ]
   },
+  async headers() {
+    return [
+      {
+        source: '/logo.png',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, immutable, max-age=31536000',
+          },
+        ],
+      },
+      {
+        source: '/images/:all*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, immutable, max-age=31536000',
+          },
+        ],
+      },
+      {
+        source: '/images/tokens/:all*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, immutable, max-age=604800',
+          },
+        ],
+      },
+    ]
+  },
   async redirects() {
     return [
       {
@@ -101,7 +133,7 @@ const config = {
   },
 }
 
-module.exports = withBundleAnalyzer(withSentryConfig(config, sentryWebpackPluginOptions))
+module.exports = withBundleAnalyzer(withSentryConfig(withTM(config), sentryWebpackPluginOptions))
 
 // only on testnet : for test!!!!!!!
 // module.exports = {

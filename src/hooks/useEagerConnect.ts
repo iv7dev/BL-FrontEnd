@@ -18,6 +18,20 @@ const _binanceChainListener = async () =>
     }),
   )
 
+const _ethereumListener = async () =>
+  new Promise<void>((resolve) =>
+    Object.defineProperty(window, 'ethereum', {
+      get() {
+        return this._eth
+      },
+      set(_eth) {
+        this._eth = _eth
+
+        resolve()
+      },
+    }),
+  )
+
 const safeGetLocalStorageItem = () => {
   try {
     return (
@@ -56,20 +70,24 @@ const useEagerConnect = () => {
         return
       }
       if (connectorId === ConnectorNames.Injected) {
+        const isEthereumDefined = Reflect.has(window, 'ethereum')
+
+        // handle opera lazy inject ethereum
+        if (!isEthereumDefined) {
+          _ethereumListener().then(() => tryLogin(connectorId))
+
+          return
+        }
         // somehow injected login not working well on development mode
         injected.isAuthorized().then(() => tryLogin(connectorId))
       } else {
         tryLogin(connectorId)
       }
     } else {
-      injected.isAuthorized().then((isAuthorized) => {
-        if (isAuthorized) {
+      // Dapp browse will try login even is not authorized.
+      injected.isAuthorized().then(() => {
+        if (isMobile && window.ethereum) {
           tryLogin(ConnectorNames.Injected)
-        } else {
-          // eslint-disable-next-line no-lonely-if
-          if (isMobile && window.ethereum) {
-            tryLogin(ConnectorNames.Injected)
-          }
         }
       })
     }

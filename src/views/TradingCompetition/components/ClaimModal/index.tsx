@@ -7,11 +7,11 @@ import useToast from 'hooks/useToast'
 import { useCallWithGasPrice } from 'hooks/useCallWithGasPrice'
 import useCatchTxError from 'hooks/useCatchTxError'
 import { ToastDescriptionWithTx } from 'components/Toast'
-import { useCompetitionRewards, getRewardGroupAchievements } from '../../helpers'
+import { useModCompetitionRewards, getRewardGroupAchievements } from '../../helpers'
 import { CompetitionProps } from '../../types'
-import MboxBunnyNft from '../../pngs/mobox-bunny-nft.png'
-import MboxAllBunnies from '../../pngs/mbox-all-bunnies.png'
-import MysteryBox from '../../pngs/mystery-box.png'
+import MoboxBunnyNft from '../../pngs/mobox-bunny-nft.png'
+import MoboxAllBunnies from '../../pngs/mobox-all-bunnies.png'
+import { mboxPrizes } from '../../../../config/constants/trading-competition/prizes'
 
 const ImageWrapper = styled(Flex)`
   justify-content: center;
@@ -28,13 +28,12 @@ const ClaimModal: React.FC<CompetitionProps> = ({ onDismiss, onClaimSuccess, use
   const { fetchWithCatchTxError, loading: isConfirming } = useCatchTxError()
   const { t } = useTranslation()
 
-  const { userRewardGroup, userCakeRewards, userMoboxRewards, userPointReward, canClaimMysteryBox, canClaimNFT } =
-    userTradingInformation
-  const { cakeReward, moboxReward } = useCompetitionRewards({
+  const { userRewardGroup, userCakeRewards, userDarRewards, userPointReward, canClaimNFT } = userTradingInformation
+  const { cakeReward, darReward } = useModCompetitionRewards({
     userCakeRewards,
-    userMoboxRewards,
+    userDarRewards,
   })
-  const achievement = getRewardGroupAchievements(userRewardGroup, userPointReward)
+  const achievement = getRewardGroupAchievements(mboxPrizes, userRewardGroup, userPointReward)
   const { callWithGasPrice } = useCallWithGasPrice()
 
   const handleClaimClick = async () => {
@@ -66,29 +65,21 @@ const ClaimModal: React.FC<CompetitionProps> = ({ onDismiss, onClaimSuccess, use
           {cakeReward.toFixed(4)} CAKE
         </Heading>
         <Heading mt="16px" scale="md" mb={canClaimNFT ? '16px' : '0px'}>
-          {moboxReward.toFixed(4)} MBOX
+          {darReward.toFixed(4)} DAR
         </Heading>
         {/* NFT */}
         {canClaimNFT ? (
           <Flex alignItems="center" flexDirection="column" width="100%">
             <ImageWrapper>
-              <Image src={MboxBunnyNft} width={128} height={128} />
+              <Image src={MoboxBunnyNft} width={128} height={128} />
             </ImageWrapper>
             <Text mt="8px">{t('Collectible NFT')}</Text>
-          </Flex>
-        ) : null}
-        {canClaimMysteryBox ? (
-          <Flex mt="8px" alignItems="center" flexDirection="column" width="100%">
-            <ImageWrapper>
-              <Image src={MysteryBox} width={78} height={56} />
-            </ImageWrapper>
-            <Text mt="8px">{t('Mystery Box')}</Text>
           </Flex>
         ) : null}
         {canClaimNFT ? (
           <Flex mt="8px" alignItems="center" flexDirection="column" width="100%">
             <ImageWrapper>
-              <Image src={MboxAllBunnies} width={128} height={95} />
+              <Image src={MoboxAllBunnies} width={128} height={95} />
             </ImageWrapper>
             <Text mt="8px">{t('Mobox Avatar NFT')}</Text>
             <Text color="textSubtle" mt="8px" fontSize="12px" textAlign="center">
