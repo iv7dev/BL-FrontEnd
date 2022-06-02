@@ -56,7 +56,7 @@
     "@gelatonetwork/limit-orders-lib": "^4.1.0",
     "@genesysnetwork/sdk": "^0.0.4",
     "@next/bundle-analyzer": "^12.0.7",
-    "@reduxjs/toolkit": "^1.5.0",
+    "@reduxjs/toolkit": "^1.8.2",
     "@sentry/nextjs": "6.19.6",
     "@uniswap/token-lists": "^1.0.0-beta.19",
     "@web3-react/core": "^6.1.9",
