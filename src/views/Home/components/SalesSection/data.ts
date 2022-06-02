@@ -58,7 +58,7 @@ export const cakeSectionData = (t: TranslateFunction): SalesSectionProps => ({
   ),
   reverse: false,
   primaryButton: {
-    to: '/swap?outputCurrency=0xc8bf24E6a3A3c1007C96831bf89A81Bfe824CC65', // token tgsys testnet
+    to: '/swap?outputCurrency=0xc073eb514B96cFbe470b0d23e0a620BaE73ee165', // token tgsys testnet
     text: t('Buy GSYS'),
     external: false,
   },

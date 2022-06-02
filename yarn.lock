@@ -1729,10 +1729,10 @@
     graphql-request "^3.5.0"
     tslib "^2.3.1"
 
-"@genesysnetwork/sdk@^0.0.3":
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/@genesysnetwork/sdk/-/sdk-0.0.3.tgz#8372a590e5d6d016ed0967d5a0dfe37d8a3cd717"
-  integrity sha512-rL1SQePiAAT+E6BCcot3rJjkH/1CHhaKmHhgRfQEv3jlq9jLTg4262LnqP8RrhcoGudVZKS3Fvdjb1lJz0FC/w==
+"@genesysnetwork/sdk@^0.0.4":
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/@genesysnetwork/sdk/-/sdk-0.0.4.tgz#f525c44041799e1d259d4651091af1a5ed85ca97"
+  integrity sha512-GH4AcOSwgS04SE1484i4tyHwGmoeyQWE9t6GspL1sXX80B7lynF6giVw9vXC/33vz5tZln5pfVM0mwE0hfg4Nw==
   dependencies:
     big.js "^5.2.2"
     decimal.js-light "^2.5.0"

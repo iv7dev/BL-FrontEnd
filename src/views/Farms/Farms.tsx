@@ -278,7 +278,7 @@ const Farms: React.FC = ({ children }) => {
     const { token, quoteToken } = farm
     const tokenAddress = token.address
     const quoteTokenAddress = quoteToken.address
-    const lpLabel = farm.lpSymbol && farm.lpSymbol.split(' ')[0].toUpperCase().replace('PANCAKE', '')
+    const lpLabel = farm.lpSymbol && farm.lpSymbol.split(' ')[0].toUpperCase().replace('BLUE LOTUS', '')
 
     const row: RowProps = {
       apr: {
@@ -289,6 +289,7 @@ const Farms: React.FC = ({ children }) => {
         lpSymbol: farm.lpSymbol,
         tokenAddress,
         quoteTokenAddress,
+        cakePrice,
         originalValue: farm.apr,
       },
       farm: {
@@ -435,14 +436,14 @@ const Farms: React.FC = ({ children }) => {
               <Text fontSize={['16px', null, '20px']} color="failure" padding="0px 4px">
                 or
               </Text>
-              <FinishedTextLink
+              {/* <FinishedTextLink
                 external
                 color="failure"
                 fontSize={['16px', null, '20px']}
                 href="https://v1-farms.pancakeswap.finance/farms/history"
               >
                 {t('check out v1 farms')}.
-              </FinishedTextLink>
+              </FinishedTextLink> */}
             </Flex>
           </FinishedTextContainer>
         )}

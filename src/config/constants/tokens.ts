@@ -22,21 +22,23 @@ export const mainnetTokens = defineTokens({
   ),
   // bnb here points to the wbnb contract. Wherever the currency BNB is required, conditional checks for the symbol 'BNB' can be used
   bnb: new Token(MAINNET, '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c', 18, 'BNB', 'BNB', 'https://www.binance.com/'),
+
   gsys: new Token(
     MAINNET,
-    '0x7255fbecd4C672E5aE2803532014d86b5DFA0609',
+    '0xc073eb514B96cFbe470b0d23e0a620BaE73ee165',
     18,
     'GSYS',
-    'Genesys Network Token',
+    'Genesys Token',
     'https://genesys.network/',
   ),
+
   cake: new Token(
     MAINNET,
     '0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82',
     18,
     'CAKE',
     'PancakeSwap Token',
-    'https://genesys.network/',
+    'https://pancakeswap.finance/',
   ),
   gmi: new Token(MAINNET, '0x93D8d25E3C9A847a5Da79F79ecaC89461FEcA846', 18, 'GMI', 'Gamifi', 'https://gamifi.gg/'),
   tlos: new Token(MAINNET, '0xb6C53431608E626AC81a9776ac3e999c5556717c', 18, 'TLOS', 'Telos', 'https://www.telos.net/'),
@@ -221,11 +223,11 @@ export const mainnetTokens = defineTokens({
   ),
   syrup: new Token(
     MAINNET,
-    '0xA04b80973771ac9895D94c9992E5aA4Eaac3b4Cc',
+    '0x009cF7bC57584b7998236eff51b98A168DceA9B0',
     18,
-    'GBAR',
-    'GsysBar Token',
-    'https://genesys.network/',
+    'SYRUP',
+    'SyrupBar Token',
+    'https://pancakeswap.finance/',
   ),
   pha: new Token(
     MAINNET,
@@ -2123,21 +2125,13 @@ export const testnetTokens = defineTokens({
     'Wrapped BNB',
     'https://www.binance.com/',
   ),
-  tgsys: new Token(
-    TESTNET,
-    '0xc8bf24E6a3A3c1007C96831bf89A81Bfe824CC65',
-    18,
-    'TGSYS',
-    'Test Genesys Network Token',
-    'https://genesys.network/',
-  ),
   cake: new Token(
     TESTNET,
     '0xa35062141Fa33BCA92Ce69FeD37D0E8908868AAe',
     18,
     'CAKE',
-    'Cake Token',
-    'https://genesys.network/',
+    'PancakeSwap Token',
+    'https://pancakeswap.finance/',
   ),
   busd: new Token(
     TESTNET,
@@ -2149,11 +2143,11 @@ export const testnetTokens = defineTokens({
   ),
   syrup: new Token(
     TESTNET,
-    '0xE6f27Fbd3Df8c7424f888a137e935A770BBEB74F',
+    '0xfE1e507CeB712BDe086f3579d2c03248b2dB77f9',
     18,
     'SYRUP',
     'SyrupBar Token',
-    'https://genesys.network/',
+    'https://pancakeswap.finance/',
   ),
   bake: new Token(
     TESTNET,

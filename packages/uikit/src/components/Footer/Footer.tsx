@@ -91,7 +91,7 @@ const MenuItem: React.FC<FooterProps> = ({
             </Box>
             <Button
               as="a"
-              href="/swap?outputCurrency=0xc8bf24E6a3A3c1007C96831bf89A81Bfe824CC65" // token tgsys testnet
+              href="/swap?outputCurrency=0xc073eb514B96cFbe470b0d23e0a620BaE73ee165" // gsys
               target="_blank"
               scale="sm"
               endIcon={<ArrowForwardIcon color={lightColors.backgroundAlt} />}

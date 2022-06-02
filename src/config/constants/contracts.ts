@@ -1,11 +1,15 @@
 export default {
   masterChef: {
     97: '',
-    56: '0xa5f8C5Dbd5F286960b9d90548680aE5ebFf07652',
+    56: '',
   },
   masterChefV1: {
     97: '0x1d32c2945C8FDCBc7156c553B7cEa4325a17f4f9',
-    56: '0x73feaa1eE314F8c655E354234017bE2193C9E24E',
+    56: '0x495295a4928674b32fC05d5d59959878aBD3Df20', // deployed by Stephany
+  },
+  cakeVault: {
+    56: '0x45c54210128a065de780C4B0Df3d16664f7f859e', // pool staking gsyspool.sol
+    97: '',
   },
   multiCall: {
     56: '0xfF6FD90A470Aaa0c1B8A54681746b07AcdFedc9B',
@@ -64,10 +68,6 @@ export default {
   easterNft: {
     56: '0x23c41D28A239dDCAABd1bb1deF8d057189510066',
     97: '0x24ec6962dbe874F6B67B5C50857565667fA0854F',
-  },
-  cakeVault: {
-    56: '0x45c54210128a065de780C4B0Df3d16664f7f859e',
-    97: '',
   },
   predictions: {
     56: '0x18B2A687610328590Bc8F2e5fEdDe3b582A49cdA',

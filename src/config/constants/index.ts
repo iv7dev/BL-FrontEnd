@@ -3,7 +3,7 @@ import { BigNumber } from '@ethersproject/bignumber'
 import { mainnetTokens, testnetTokens } from './tokens'
 
 export const ROUTER_ADDRESS = {
-  [ChainId.MAINNET]: '0x7045605B0678752f647E925d63ce22A55266fc71',
+  [ChainId.MAINNET]: '0x70D319F74090d3BB6bfEA496Bea73692C59B1AD1', // deployed by Stephany
   [ChainId.TESTNET]: '0x93fc823CfBD38025CBf1b495842f7B654E28561C',
 }
 
@@ -24,7 +24,7 @@ export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
     mainnetTokens.eth,
     mainnetTokens.usdc,
   ],
-  [ChainId.TESTNET]: [testnetTokens.wbnb, testnetTokens.tgsys, testnetTokens.busd],
+  [ChainId.TESTNET]: [testnetTokens.wbnb, testnetTokens.cake, testnetTokens.busd],
 }
 
 /**
@@ -47,13 +47,13 @@ export const CUSTOM_BASES: { [chainId in ChainId]?: { [tokenAddress: string]: To
 // used for display in the default list when adding liquidity
 export const SUGGESTED_BASES: ChainTokenList = {
   [ChainId.MAINNET]: [mainnetTokens.busd, mainnetTokens.gsys, mainnetTokens.btcb],
-  [ChainId.TESTNET]: [testnetTokens.wbnb, testnetTokens.tgsys, testnetTokens.busd],
+  [ChainId.TESTNET]: [testnetTokens.wbnb, testnetTokens.cake, testnetTokens.busd],
 }
 
 // used to construct the list of all pairs we consider by default in the frontend
 export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
   [ChainId.MAINNET]: [mainnetTokens.wbnb, mainnetTokens.dai, mainnetTokens.busd, mainnetTokens.usdt],
-  [ChainId.TESTNET]: [testnetTokens.wbnb, testnetTokens.tgsys, testnetTokens.busd],
+  [ChainId.TESTNET]: [testnetTokens.wbnb, testnetTokens.cake, testnetTokens.busd],
 }
 
 export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } = {
@@ -112,8 +112,8 @@ export const NOT_ON_SALE_SELLER = '0x0000000000000000000000000000000000000000'
 
 // BNB
 export const DEFAULT_INPUT_CURRENCY = 'BNB'
-// CAKE
-export const DEFAULT_OUTPUT_CURRENCY = '0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82'
+// GSYS
+export const DEFAULT_OUTPUT_CURRENCY = '0xc073eb514B96cFbe470b0d23e0a620BaE73ee165' // deployed by Stephany
 
 export const FARM_AUCTION_HOSTING_IN_SECONDS = 604800
 
@@ -123,5 +123,7 @@ export const GELATO_NATIVE = '0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee'
 export const GELATO_HANDLER = 'pancakeswap'
 export const GENERIC_GAS_LIMIT_ORDER_EXECUTION = BigNumber.from(500000)
 
-export const EXCHANGE_DOCS_URLS = 'https://docs.genesys.network/products/pancakeswap-exchange'
-export const LIMIT_ORDERS_DOCS_URL = 'https://docs.genesys.network/products/pancakeswap-exchange/limit-orders'
+export const EXCHANGE_DOCS_URLS = 'https://docs.genesys.network/products/genesys-exchange'
+export const LIMIT_ORDERS_DOCS_URL = 'https://docs.genesys.network/products/genesys-exchange/limit-orders'
+
+export const GALAXY_NFT_CAMPAIGN_ID = 'GCpp2UUxqQ'

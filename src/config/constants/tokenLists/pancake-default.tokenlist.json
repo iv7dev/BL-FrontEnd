@@ -8,10 +8,7 @@
   },
   "tags": {},
   "logoURI": "https://genesys.network/logo.png",
-  "keywords": [
-    "genesys",
-    "default"
-  ],
+  "keywords": ["genesys", "default"],
   "tokens": [
     {
       "name": "WBNB Token",
@@ -54,12 +51,12 @@
       "logoURI": "https://genesys.network/images/tokens/0x55d398326f99059fF775485246999027B3197955.png"
     },
     {
-      "name": "Genesys Network Token",
+      "name": "Genesys Token",
       "symbol": "GSYS",
-      "address": "0x7255fbecd4C672E5aE2803532014d86b5DFA0609",
+      "address": "0xc073eb514B96cFbe470b0d23e0a620BaE73ee165",
       "chainId": 56,
       "decimals": 18,
-      "logoURI": "https://gensys.network/images/tokens/0x7255fbecd4C672E5aE2803532014d86b5DFA0609.png"
+      "logoURI": "https://gensys.network/images/tokens/0xc073eb514B96cFbe470b0d23e0a620BaE73ee165.png"
     },
     {
       "name": "PancakeSwap Token",
@@ -134,7 +131,7 @@
       "logoURI": "https://genesys.network/images/tokens/0xA7f552078dcC247C2684336020c03648500C6d9F.png"
     },
     {
-      "name": "Genesys Network Token",
+      "name": "Genesys Token TEST",
       "symbol": "GSYS",
       "address": "0xc8bf24E6a3A3c1007C96831bf89A81Bfe824CC65",
       "chainId": 97,

@@ -1,10 +1,10 @@
 {
   "name": "genesysnetwork-dex",
-  "description": "Powered by Lord Vegeta. #nohayretroceso",
+  "description": "Powered by Stephany Nunez",
   "keywords": [],
   "author": "Crypto Club - Blue Lotus DAO",
   "license": "ISC",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "private": true,
   "workspaces": [
     "packages/*"
@@ -54,7 +54,7 @@
     "@ethersproject/strings": "^5.5.0",
     "@ethersproject/units": "^5.5.0",
     "@gelatonetwork/limit-orders-lib": "^4.1.0",
-    "@genesysnetwork/sdk": "^0.0.3",
+    "@genesysnetwork/sdk": "^0.0.4",
     "@next/bundle-analyzer": "^12.0.7",
     "@reduxjs/toolkit": "^1.5.0",
     "@sentry/nextjs": "6.19.6",

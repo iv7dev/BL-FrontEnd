@@ -56,11 +56,11 @@ const config: (t: ContextApi['t'], languageCode?: string) => ConfigMenuItemsType
     items: [
       {
         label: t('Farms'),
-        href: '#',
+        href: '/farms',
       },
       {
         label: t('Pools'),
-        href: '#',
+        href: '/pools',
       },
     ],
   },
@@ -130,8 +130,8 @@ const config: (t: ContextApi['t'], languageCode?: string) => ConfigMenuItemsType
     hideSubNav: true,
     items: [
       {
-        label: t('Info'),
-        href: '#',
+        label: t('Analitycs'),
+        href: '/info',
       },
       {
         label: t('IFO'),
