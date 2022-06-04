@@ -134,8 +134,8 @@ const config = {
 }
 
 module.exports = withBundleAnalyzer(withSentryConfig(withTM(config), sentryWebpackPluginOptions))
-module.exports = {
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-}
+// module.exports = {
+//   typescript: {
+//     ignoreBuildErrors: true,
+//   },
+// }

@@ -80,7 +80,8 @@ const CakeDataRow = () => {
   const { observerRef, isIntersecting } = useIntersectionObserver()
   const [loadData, setLoadData] = useState(false)
   const {
-    data: { cakeSupply, burnedBalance, circulatingSupply } = {
+    data: { gsysSupply, cakeSupply, burnedBalance, circulatingSupply } = {
+      gsysSupply: 0,
       cakeSupply: 0,
       burnedBalance: 0,
       circulatingSupply: 0,
@@ -106,6 +107,7 @@ const CakeDataRow = () => {
       const circulating = totalSupply.sub(totalBurned.add(totalLockedAmount))
 
       return {
+        gsysSupply: totalSupply ? +formatBigNumber(totalSupply) : 0,
         cakeSupply: totalSupply && burned ? +formatBigNumber(totalSupply.sub(totalBurned)) : 0,
         burnedBalance: burned ? +formatBigNumber(totalBurned) : 0,
         circulatingSupply: circulating ? +formatBigNumber(circulating) : 0,
@@ -130,15 +132,15 @@ const CakeDataRow = () => {
       <Flex flexDirection="column" style={{ gridArea: 'a' }}>
         <Text color="textSubtle">{t('Circulating Supply')}</Text>
         {circulatingSupply ? (
-          <Balance decimals={0} lineHeight="1.1" fontSize="24px" bold value={circulatingSupply} />
+          <Balance decimals={0} lineHeight="1.1" fontSize="24px" bold value={gsysSupply} />
         ) : (
           <Skeleton height={24} width={126} my="4px" />
         )}
       </Flex>
       <StyledColumn noMobileBorder style={{ gridArea: 'b' }}>
         <Text color="textSubtle">{t('Total supply')}</Text>
-        {cakeSupply ? (
-          <Balance decimals={0} lineHeight="1.1" fontSize="24px" bold value={cakeSupply} />
+        {gsysSupply ? (
+          <Balance decimals={0} lineHeight="1.1" fontSize="24px" bold value={gsysSupply} />
         ) : (
           <>
             <div ref={observerRef} />
@@ -149,20 +151,20 @@ const CakeDataRow = () => {
       <StyledColumn noMobileBorder style={{ gridArea: 'c' }}>
         <Text color="textSubtle">{t('Max Supply')}</Text>
 
-        <Balance decimals={0} lineHeight="1.1" fontSize="24px" bold value={750000000} />
+        <Balance decimals={0} lineHeight="1.1" fontSize="24px" bold value={gsysSupply} />
       </StyledColumn>
       <StyledColumn noDesktopBorder style={{ gridArea: 'd' }}>
         <Text color="textSubtle">{t('Market cap')}</Text>
-        {/* {mcap?.gt(0) && mcapString ? (
+        {mcap?.gt(0) && mcapString ? (
           <Heading scale="lg">{t('$%marketCap%', { marketCap: mcapString })}</Heading>
         ) : (
           <Skeleton height={24} width={126} my="4px" />
-        )} */}
+        )}
       </StyledColumn>
       <StyledColumn style={{ gridArea: 'e' }}>
         <Text color="textSubtle">{t('Burned to date')}</Text>
         {burnedBalance ? (
-          <Balance decimals={0} lineHeight="1.1" fontSize="24px" bold value={burnedBalance} />
+          <Balance decimals={0} lineHeight="1.1" fontSize="24px" bold value={0} /> // burnedBalance en after burn
         ) : (
           <Skeleton height={24} width={126} my="4px" />
         )}
